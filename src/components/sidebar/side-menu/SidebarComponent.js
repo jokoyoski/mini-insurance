@@ -116,14 +116,6 @@ class SidebarComponent extends React.Component {
                                 onClick={() => history.push('/overview/plans')}
                                 active={this.props.selectedItem === 'Tickets'}
                             />
-                            <MenuItemComponent
-                                title="AutoShop" icon={IconIdeas}
-                                onClick={() => this.onItemClicked('Ideas')}
-                                active={this.props.selectedItem === 'Ideas'} />
-                            <MenuItemComponent
-                                title="Logout" icon={IconContacts}
-                                onClick={() => this.onItemClicked('Contacts')}
-                                active={this.props.selectedItem === 'Contacts'} />
                         </Column>
                     </Column>
                     {(isMobile && expanded)&&<div className={css(styles.outsideLayer)} onClick={this.toggleMenu}></div>}
