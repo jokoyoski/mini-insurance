@@ -43,7 +43,7 @@
             text-align: center;
             height: 350px;
             .button {
-                @include button(80%,#f7941d)
+                @include button(80%, #f7941d);
             }
             .fasta {
                 color: #f7941d;
@@ -67,7 +67,7 @@
             padding: 8px;
             font-size: 0.7rem;
         }
-        tr{
+        tr {
             height: 65px;
             font-size: 0.7rem;
         }
@@ -81,7 +81,7 @@
         }
         tr:nth-child(even) {
             background-color: #f2f2f2;
-            background-color: #FFF2E5;
+            background-color: #fff2e5;
         }
 
         tr:hover {
@@ -119,7 +119,7 @@
                 text-align: center;
                 height: 350px;
                 .button {
-                    @include button(80%,#f7941d)
+                    @include button(80%, #f7941d);
                 }
                 .fasta {
                     color: #f7941d;
@@ -143,7 +143,7 @@
                 border: 1px solid #ddd;
                 padding: 8px;
             }
-            tr{
+            tr {
                 height: 65px;
                 font-size: 0.7rem;
             }
@@ -156,7 +156,7 @@
                 font-size: 0.7rem;
             }
             tr:nth-child(even) {
-                background-color: #FFF2E5;
+                background-color: #fff2e5;
             }
 
             tr:hover {
@@ -164,14 +164,15 @@
             }
         }
     }
-
-.table-button{
-    @include button(100%,#1ABC9C)
-}
 }
 
-
-
-.table-button{
-    @include button(100%,#1ABC9C)
+@media (max-width: 590px) {
+    .table-button {
+        @include button(100%, #1abc9c);
+    }
+}
+@media (min-width: 590px) {
+    .table-button {
+        @include button(50%, #1abc9c);
+    }
 }
