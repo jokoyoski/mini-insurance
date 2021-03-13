@@ -37,49 +37,52 @@ export const SubscriptionComponent = () => {
             </div>
             <div className='subscription-history'>
                 <p className='subscription-history-label'>Subscription History</p>
-                <table style={{ width: '90%', borderCollapse: 'collapse', fontFamily: 'Muli', margin: '0 auto' }}>
+                <div style={{overflowX:'auto'}}>
+                <table style={{ width: '90%', borderCollapse: 'collapse', fontFamily: 'Muli', margin: '0 auto'}}>
                    
-                        <tbody>
-                            <tr>
-                                <th>SubscriptionID</th>
-                                <th>Name</th>
-                                <th>Date</th>
-                                <th>Expiry Date</th>
-                                <th>Status</th>
+                   <tbody>
+                       <tr>
+                           <th>SubscriptionID</th>
+                           <th>Name</th>
+                           <th>Date</th>
+                           <th>Expiry Date</th>
+                           <th>Status</th>
 
-                            </tr>
-                            <tr>
-                                <td>1234567890</td>
-                                <td>FASTA</td>
-                                <td>1st March 2021</td>
-                                <td>1st March 2021</td>
-                                <td> <a href="#" class="table-button">Activate</a></td>
-                            </tr>
-                            <tr>
-                                <td>1234567890</td>
-                                <td>FASTA</td>
-                                <td>1st March 2021</td>
-                                <td>1st March 2021</td>
-                                <td> <a href="#" class="table-button">Activate</a></td>
-                            </tr>
-                            <tr>
-                                <td>1234567890</td>
-                                <td>FASTA</td>
-                                <td>1st March 2021</td>
-                                <td>1st March 2021</td>
-                                <td> <a href="#" class="table-button">Activate</a></td>
-                            </tr>
-                            <tr>
-                                <td>1234567890</td>
-                                <td>FASTA</td>
-                                <td>1st March 2021</td>
-                                <td>1st March 2021</td>
-                                <td> <a href="#" class="table-button">Activate</a></td>
-                            </tr>
-                        </tbody>
-                  
-                </table>
-            </div>
+                       </tr>
+                       <tr>
+                           <td>1234567890</td>
+                           <td>FASTA</td>
+                           <td>1st March 2021</td>
+                           <td>1st March 2021</td>
+                           <td> <a href="#" class="table-button">Activate</a></td>
+                       </tr>
+                       <tr>
+                           <td>1234567890</td>
+                           <td>FASTA</td>
+                           <td>1st March 2021</td>
+                           <td>1st March 2021</td>
+                           <td> <a href="#" class="table-button">Activate</a></td>
+                       </tr>
+                       <tr>
+                           <td>1234567890</td>
+                           <td>FASTA</td>
+                           <td>1st March 2021</td>
+                           <td>1st March 2021</td>
+                           <td> <a href="#" class="table-button">Activate</a></td>
+                       </tr>
+                       <tr>
+                           <td>1234567890</td>
+                           <td>FASTA</td>
+                           <td>1st March 2021</td>
+                           <td>1st March 2021</td>
+                           <td> <a href="#" class="table-button">Activate</a></td>
+                       </tr>
+                   </tbody>
+             
+           </table>
+    
+                </div>
+               </div>
 
         </div>
     )
