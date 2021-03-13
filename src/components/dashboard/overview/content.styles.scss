@@ -1,0 +1,126 @@
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    .card-section {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 7px;
+        .inner-card-section {
+
+            
+            display: flex;
+            height: 130px;
+            width: 50%;
+            background-color: white;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgb(223, 224, 235);
+        }
+    }
+    .master-card-transaction-history {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 7px;
+        margin-bottom: 40px;
+        width: 100%;
+        .master-card {
+            width: 100%;
+            height: 400px;
+            background-color: #fff2e5;
+        }
+        .transaction-history {
+            margin-top: 15px;
+            width: 100%;
+            height: 400px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            .transaction-history-see-all {
+                padding: 5px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .trans-history-list {
+                overflow-x: auto;
+                .trans-history {
+                    display: flex;
+                    height: 70px;
+                    flex-direction: row;
+                    .name-picture {
+                        display: flex;
+                        flex-direction: row;
+                        width: 35%;
+                        font-family: 'Muli';
+                        font-size: 0.8rem;
+                        justify-content: space-between;
+                        .name-address {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+
+                    .history {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-end;
+                        width: 60%;
+                        .history-type {
+                            display: flex;
+                            font-family: 'Muli';
+                            font-size: 0.8rem;
+                            flex-direction: column;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .content {
+        display: flex;
+        flex-flow: column wrap;
+        .card-section {
+            display: flex;
+            flex-flow: row wrap;
+            .inner-card-section {
+                display: flex;
+                height: 130px;
+                width: 25%;
+                flex-flow: column wrap;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid rgb(223, 224, 235);
+            }
+        }
+        .master-card-transaction-history {
+            margin-top: 30px;
+            display: flex;
+            flex-flow: row;
+            width: 100%;
+            .master-card {
+                flex: 0 0 45%;
+                height: 400px;
+                background-color: #fff2e5;
+            }
+            .transaction-history {
+                flex: 1 0 45%;
+                height: 400px;
+                margin-left: 70px;
+                background-color: white;
+                display: flex;
+            }
+        }
+    }
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    background-color: orange;
+    border-radius: 50%;
+    display: inline-block;
+  }

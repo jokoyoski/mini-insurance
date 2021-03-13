@@ -1,0 +1,57 @@
+.avatar {
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    margin-left: 14px;
+    border: 1px solid #DFE0EB;
+}
+.container {
+    height: 40px;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+.name {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    letter-spacing: 0.2px;
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+.separator {
+    border-left: 1px solid #DFE0EB;
+    margin-left: 32px;
+    margin-right: 32px;
+    height: 32px;
+    width: 2px;
+    @media (max-width: 768px) {
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+}
+.title {
+    font-family:Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.0rem;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+    @media (max-width: 768px) {
+        margin-left: 36px;
+    }
+    @media (max-width: 468px) {
+        font-size: 20px;
+    }
+}
+.iconStyles {
+    cursor: pointer;
+    margin-left: 25px;
+    @media (max-width: 768px) {
+        margin-left: 12px;
+    }
+}

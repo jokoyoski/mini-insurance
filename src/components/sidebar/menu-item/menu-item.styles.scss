@@ -1,0 +1,36 @@
+
+.menu-container{
+ display: flex;
+ flex-flow: row nowrap;
+ align-items: center;
+ height: 56px;
+ cursor: pointer;
+ :hover{
+     background-color: 'rgba(221,226,255, 0.08)';
+ }
+ padding-left: 32px;
+ padding-right: 32px;
+}
+
+.activeBar {
+    height: 56px;
+    width: 3px;
+    background-color: #DDE2FF;
+    position: absolute;
+    left: 0
+}
+.activeContainer{
+    background-color: rgba(221,226,255, 0.08)
+}
+.activeTitle {
+    color: #DDE2FF;
+}
+
+.title {
+    font-family: Muli;
+    font-size: 1.4rem;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: white;
+    margin-left: 24px
+}
