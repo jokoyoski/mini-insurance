@@ -1,9 +1,7 @@
 import React from 'react';
-import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite/no-important';
 import MiniCardComponent from './MiniCardComponent';
-import UnresolvedTicketsComponent from '../UnResolvedTicketsComponent';
-import TasksComponent from '../TasksComponent';
+
 
 const styles = StyleSheet.create({
     cardsContainer: {
@@ -46,17 +44,17 @@ const styles = StyleSheet.create({
 
 function ContentComponent() {
     return (
-        <div style={{ backgroundColor: '#fff2e5' }} className='content' >
+        <div style={{ backgroundColor: '#fff2e5' }}  >
             <div className='card-section'>
                 <div className='inner-card-section'>
-                    <div style={{ display: 'flex', width: '50%' }}>
+                    <div className='inner-top-text' style={{ display: 'flex', width: '50%' }}>
                         <p style={{ marginTop: '12px', marginRight: '7px' }} className='dot'></p>
                         <p style={{ fontFamily: 'Muli', color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >₦5000</p>
                     </div>
                     <p style={{ fontFamily: 'Muli', color: 'gray', fontWeight: '200', lineHeight: '40px', fontSize: '0.8rem' }} >Available Balance</p>
                 </div>
                 <div className='inner-card-section'>
-                    <div style={{ display: 'flex', width: '50%' }}>
+                    <div className='inner-top-text' style={{ display: 'flex', width: '50%' }}>
                         <p style={{ marginTop: '12px', marginRight: '7px' }} className='dot'></p>
                         <p style={{ fontFamily: 'Muli', color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >1st Nov. 2020</p>
                     </div>
@@ -64,7 +62,7 @@ function ContentComponent() {
 
                 </div>
                 <div className='inner-card-section'>
-                    <div style={{ display: 'flex', width: '50%' }}>
+                    <div className='inner-top-text' style={{ display: 'flex', width: '50%' }}>
                         <p style={{ marginTop: '12px', marginRight: '7px' }} className='dot'></p>
                         <p style={{ fontFamily: 'Muli', color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >50</p>
 
@@ -73,7 +71,7 @@ function ContentComponent() {
 
                 </div>
                 <div className='inner-card-section'>
-                    <div style={{ display: 'flex', width: '50%' }}>
+                    <div className='inner-top-text' style={{ display: 'flex', width: '50%' }}>
                         <p style={{ marginTop: '12px', marginRight: '7px' }} className='dot'></p>
                         <p style={{ fontFamily: 'Muli', color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >50</p>
                     </div>

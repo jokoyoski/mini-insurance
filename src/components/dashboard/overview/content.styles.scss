@@ -6,8 +6,6 @@
         flex-flow: row wrap;
         padding: 7px;
         .inner-card-section {
-
-            
             display: flex;
             height: 130px;
             width: 50%;
@@ -16,6 +14,9 @@
             justify-content: center;
             align-items: center;
             border: 1px solid rgb(223, 224, 235);
+            .inner-top-text{
+                justify-content: center;
+            }
         }
     }
     .master-card-transaction-history {

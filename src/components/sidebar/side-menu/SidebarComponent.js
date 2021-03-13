@@ -1,16 +1,13 @@
 import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite';
-import LogoComponent from '../LogoComponent';
 import MenuItemComponent from '../menu-item/MenuItemComponent';
+import PropTypes from "prop-types";
+import { withRouter } from "react-router";
 import IconOverview from '../../../assets/icons/icon-overview.js';
 import IconTickets from '../../../assets/icons/icon-tickets';
 import IconIdeas from '../../../assets/icons/icon-ideas.js';
 import IconContacts from '../../../assets/icons/icon-contacts';
-import IconAgents from '../../../assets/icons/icon-agents';
-import IconArticles from '../../../assets/icons/icon-articles';
-import IconSettings from '../../../assets/icons/icon-settings';
-import IconSubscription from '../../../assets/icons/icon-subscription';
 import IconBurger from '../../../assets/icons/icon-burger';
 import Logo from '../../../assets/images/miniinsurance.png';
 import '../side-menu/side-menu.styles.scss';
@@ -75,10 +72,13 @@ const styles = StyleSheet.create({
 class SidebarComponent extends React.Component {
 
     state = { expanded: false };
-
+    static propTypes = {
+        match: PropTypes.object.isRequired,
+        location: PropTypes.object.isRequired,
+        history: PropTypes.object.isRequired
+      };
     onItemClicked = (item) => {
-        this.setState({ expanded: false });
-        return this.props.onChange(item);
+      
     }
 
     isMobile = () => window.innerWidth <= 768;
@@ -92,6 +92,7 @@ class SidebarComponent extends React.Component {
     }
 
     render() {
+        const {history } = this.props;
         const { expanded } = this.state;
         const isMobile = this.isMobile();
         console.log(expanded)
@@ -106,12 +107,13 @@ class SidebarComponent extends React.Component {
                         <Column className={css(styles.menuItemList)}>
                             <MenuItemComponent
                                 title="Account" icon={IconOverview}
-                                onClick={() => this.onItemClicked('Overview')}
+                                onClick={() => history.push('/overview/content')}
                                 active={this.props.selectedItem === 'Overview'}
+                                
                             />
                             <MenuItemComponent
-                                title="Main" icon={IconTickets}
-                                onClick={() => this.onItemClicked('Tickets')}
+                                title="Subscriptions" icon={IconTickets}
+                                onClick={() => history.push('/overview/plans')}
                                 active={this.props.selectedItem === 'Tickets'}
                             />
                             <MenuItemComponent
@@ -124,11 +126,10 @@ class SidebarComponent extends React.Component {
                                 active={this.props.selectedItem === 'Contacts'} />
                         </Column>
                     </Column>
-                    {isMobile && expanded && <div className={css(styles.outsideLayer)} onClick={this.toggleMenu}></div>}
+                    {(isMobile && expanded)&&<div className={css(styles.outsideLayer)} onClick={this.toggleMenu}></div>}
                 </Row>
             </div>
         );
     };
 }
-
-export default SidebarComponent;
+export default withRouter(SidebarComponent);

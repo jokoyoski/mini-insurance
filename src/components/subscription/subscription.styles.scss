@@ -1,0 +1,173 @@
+@mixin button($width, $bgcolor) {
+    background-color: $bgcolor;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Muli";
+    font-size: 0.6rem;
+    display: inline-block;
+    margin: 4px 2px;
+    width: $width;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.subscription {
+    .subscription-packages {
+        color: #f7941d;
+        padding: 20px;
+        font-family: "Muli";
+    }
+    .package {
+        display: flex;
+        width: 85%;
+        justify-content: space-between;
+        font-family: "Muli";
+        font-size: 0.7rem;
+        padding: 20px;
+
+        flex-wrap: wrap;
+        .plans {
+            p {
+                margin: 8px;
+            }
+            border-radius: 4px;
+            font-family: "Muli";
+            display: flex;
+            width: calc(100% / 2 - 5px);
+            margin-bottom: 5px;
+            background-color: #fff2e5;
+            flex-direction: column;
+            text-align: center;
+            height: 350px;
+            .button {
+                @include button(80%,#f7941d)
+            }
+            .fasta {
+                color: #f7941d;
+            }
+            .amount {
+                font-size: 1.5rem;
+                font-weight: 900;
+                height: 30px;
+                font-style: normal;
+            }
+        }
+    }
+    .subscription-history {
+        .subscription-history-label {
+            color: #f7941d;
+            padding: 20px;
+            font-family: "Muli";
+        }
+        td tr {
+            border: 1px solid #ddd;
+            padding: 8px;
+            font-size: 0.7rem;
+        }
+        tr{
+            height: 65px;
+            font-size: 0.7rem;
+        }
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            font-size: 0.7rem;
+            background-color: white;
+            color: black;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+            background-color: #FFF2E5;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    }
+}
+
+@media (max-width: 590px) {
+    .subscription {
+        .subscription-packages {
+            color: #f7941d;
+            padding: 20px;
+            font-family: "Muli";
+        }
+        .package {
+            display: flex;
+            margin: 0 auto;
+            width: 90%;
+            justify-content: space-between;
+            font-family: "Muli";
+            font-size: 0.7rem;
+            flex-direction: column;
+            padding: 20px;
+            .plans {
+                p {
+                    margin: 8px;
+                }
+                border-radius: 4px;
+                font-family: "Muli";
+                display: flex;
+                width: 100%;
+                background-color: #fff2e5;
+                flex-direction: column;
+                text-align: center;
+                height: 350px;
+                .button {
+                    @include button(80%,#f7941d)
+                }
+                .fasta {
+                    color: #f7941d;
+                }
+                .amount {
+                    font-size: 1.5rem;
+                    font-weight: 900;
+                    height: 30px;
+                    font-style: normal;
+                }
+            }
+        }
+
+        .subscription-history {
+            .subscription-history-label {
+                color: #f7941d;
+                padding: 20px;
+                font-family: "Muli";
+            }
+            td tr {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            tr{
+                height: 65px;
+                font-size: 0.7rem;
+            }
+            th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+                background-color: #4caf50;
+                color: white;
+                font-size: 0.7rem;
+            }
+            tr:nth-child(even) {
+                background-color: #FFF2E5;
+            }
+
+            tr:hover {
+                background-color: #ddd;
+            }
+        }
+    }
+}
+
+
+
+.table-button{
+    @include button(50%,#1ABC9C)
+}

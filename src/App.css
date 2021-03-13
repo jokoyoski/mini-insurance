@@ -11,7 +11,10 @@
   min-height: 100vh
 }
 
-
+.content{
+  overflow-x: scroll;
+  height: 570px;
+}
 
 .mainblock {
   padding: 10px;

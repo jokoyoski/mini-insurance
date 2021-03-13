@@ -1,6 +1,5 @@
 import React from 'react';
-import { bool, func, string } from 'prop-types';
-import { Row } from 'simple-flexbox';
+import { bool, func, string } from 'prop-types'; 
 import { StyleSheet, css } from 'aphrodite';
 import '../menu-item/menu-item.styles.scss';
 

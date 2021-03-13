@@ -1,11 +1,7 @@
-/*import React from 'react'
-import { setIn } from "final-form";
-import { Form, Field } from "react-final-form";
-import * as Yup from "yup";
+import React from 'react'
 
-const schema = Yup.object({
-    favoriteFood: Yup.string().required("Required"),
-});
+import { Form, Field } from "react-final-form";
+
 
 
 
@@ -26,14 +22,80 @@ export const ProfileComponent = () => {
             <div className='form'>
                 <Form
                     onSubmit={onSubmit}
-                    validate={validate}
                     render={({ handleSubmit, form, submitting, pristine, values }) => (
                         <form onSubmit={handleSubmit}>
-                            <Field name="favoriteFood">
+                            <Field name="firstname">
                                 {({ input, meta }) => (
                                     <div>
-                                        <label>Favorite Food</label>
-                                        <input {...input} type="text" placeholder="favoriteFood" />
+                                        <label>First Name</label>
+                                        <input {...input} type="text" placeholder="First Name" />
+                                        {meta.error && meta.touched && <span>{meta.error}</span>}
+                                    </div>
+                                )}
+                            </Field>
+                            <Field name="firstname">
+                                {({ input, meta }) => (
+                                    <div>
+                                        <label>First Name</label>
+                                        <input {...input} type="text" placeholder="First Name" />
+                                        {meta.error && meta.touched && <span>{meta.error}</span>}
+                                    </div>
+                                )}
+                            </Field>
+
+                            <Field name="firstname">
+                                {({ input, meta }) => (
+                                    <div>
+                                        <label>First Name</label>
+                                        <input {...input} type="text" placeholder="First Name" />
+                                        {meta.error && meta.touched && <span>{meta.error}</span>}
+                                    </div>
+                                )}
+                            </Field>
+                            <Field name="firstname">
+                                {({ input, meta }) => (
+                                    <div>
+                                        <label>First Name</label>
+                                        <input {...input} type="text" placeholder="First Name" />
+                                        {meta.error && meta.touched && <span>{meta.error}</span>}
+                                    </div>
+                                )}
+                            </Field>
+
+                            <Field name="firstname">
+                                {({ input, meta }) => (
+                                    <div>
+                                        <label>First Name</label>
+                                        <input {...input} type="text" placeholder="First Name" />
+                                        {meta.error && meta.touched && <span>{meta.error}</span>}
+                                    </div>
+                                )}
+                            </Field>
+                            <Field name="firstname">
+                                {({ input, meta }) => (
+                                    <div>
+                                        <label>First Name</label>
+                                        <input {...input} type="text" placeholder="First Name" />
+                                        {meta.error && meta.touched && <span>{meta.error}</span>}
+                                    </div>
+                                )}
+                            </Field>
+
+
+                            <Field name="firstname">
+                                {({ input, meta }) => (
+                                    <div>
+                                        <label>First Name</label>
+                                        <input {...input} type="text" placeholder="First Name" />
+                                        {meta.error && meta.touched && <span>{meta.error}</span>}
+                                    </div>
+                                )}
+                            </Field>
+                            <Field name="firstname">
+                                {({ input, meta }) => (
+                                    <div>
+                                        <label>First Name</label>
+                                        <input {...input} type="text" placeholder="First Name" />
                                         {meta.error && meta.touched && <span>{meta.error}</span>}
                                     </div>
                                 )}
@@ -47,4 +109,4 @@ export const ProfileComponent = () => {
     )
 }
 
-export default ProfileComponent*/
+export default ProfileComponent
