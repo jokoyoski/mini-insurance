@@ -151,8 +151,8 @@
                 padding-top: 12px;
                 padding-bottom: 12px;
                 text-align: left;
-                background-color: #4caf50;
-                color: white;
+                background-color: white;
+                color: black;
                 font-size: 0.7rem;
             }
             tr:nth-child(even) {
@@ -164,10 +164,14 @@
             }
         }
     }
+
+.table-button{
+    @include button(100%,#1ABC9C)
+}
 }
 
 
 
 .table-button{
-    @include button(50%,#1ABC9C)
+    @include button(100%,#1ABC9C)
 }
