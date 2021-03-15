@@ -1,7 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
 import { Row } from 'simple-flexbox';
-import { StyleSheet, css } from 'aphrodite';
 import IconSearch from '../../../assets/icons/icon-search';
 import IconBellNew from '../../../assets/icons/icon-bell-new';
 import '../header/header.styles.scss';

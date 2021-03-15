@@ -1,0 +1,29 @@
+td tr {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+tr {
+    height: 65px;
+    font-size: 0.7rem;
+}
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: white;
+    color: black;
+    font-size: 0.7rem;
+}
+tr:nth-child(even) {
+    background-color: #fff2e5;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.my-bookings{
+    color: #f7941d;
+    padding: 20px;
+    font-family: "Muli";
+}

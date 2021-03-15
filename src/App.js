@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Column, Row } from 'simple-flexbox';
-import { StyleSheet } from 'aphrodite';
 import SidebarComponent from './components/sidebar/side-menu/SidebarComponent';
 import HeaderComponent from './components/sidebar/header/HeaderComponent';
 import ContentComponent from './components/dashboard/overview/ContentComponent';
@@ -9,14 +8,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import { ProfileComponent } from './components/profile/ProfileComponent';
 import { SubscriptionComponent } from './components/subscription/SubscriptionComponent';
+import { BookingComponent } from './components/bookings/BookingComponent';
+import VehicleListComponent from './components/vechicle/vehicle-list/VehicleListComponent';
 
-const styles = StyleSheet.create({
 
-    mainBlock: {
-        backgroundColor: '#F7F8FC',
-        padding: 30
-    }
-});
 
 class App extends React.Component {
 
@@ -46,6 +41,8 @@ class App extends React.Component {
                                 <Route path="/overview/content" exact component={ContentComponent} />
                                 <Route path="/overview/profile" exact component={ProfileComponent} />
                                 <Route path="/overview/plans" exact component={SubscriptionComponent} />
+                                <Route path="/overview/bookings" exact component={BookingComponent} />
+                                <Route path="/overview/vehicles" exact component={VehicleListComponent} />
                             </div>
                         </Switch>
                     </Column>

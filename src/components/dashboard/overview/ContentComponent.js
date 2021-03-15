@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 
 function ContentComponent() {
     return (
-        <div style={{ backgroundColor: '#fff2e5' }}  >
+        <div style={{ backgroundColor: '#fff2e5' ,height:'600px', overflowX:'scroll' }}  >
             <div className='card-section'>
                 <div className='inner-card-section'>
                     <div className='inner-top-text' style={{ display: 'flex', width: '50%' }}>
