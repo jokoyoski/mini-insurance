@@ -10,7 +10,7 @@ export const SubscriptionComponent = () => {
                     <div className='plans'>
                         <p style={{ paddingTop: '5px' }} className='fasta'>FASTA</p>
                         <div style={{ display: 'flex', textAlign: 'center', margin: '0 auto' }}>
-                            <p className='amount'>₦3222,00</p>perMonth
+                            <p className='amount'>₦500</p>perMonth
                      </div>
                         <div style={{display:'flex',flexDirection:'column',justifyContent:'space-between',height:'240px'}}>
                             <div>
