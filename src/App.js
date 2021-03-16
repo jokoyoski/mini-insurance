@@ -1,10 +1,10 @@
 
 import React from 'react';
 import { Column, Row } from 'simple-flexbox';
-import SidebarComponent from './components/sidebar/side-menu/SidebarComponent';
-import HeaderComponent from './components/sidebar/header/HeaderComponent';
+import SidebarComponent from './components/sidebar/SidebarComponent';
+import HeaderComponent from './components/header/HeaderComponent';
 import ContentComponent from './components/dashboard/overview/ContentComponent';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route ,Redirect} from 'react-router-dom';
 import './App.css';
 import { ProfileComponent } from './components/profile/ProfileComponent';
 import { SubscriptionComponent } from './components/subscription/SubscriptionComponent';
@@ -33,12 +33,12 @@ class App extends React.Component {
 
             <Router>
                 <Row className='container'>
-                    <SidebarComponent selectedItem={selectedItem} onChange={(selectedItem) => this.setState({ selectedItem })} />
+                <SidebarComponent selectedItem={selectedItem} onChange={(selectedItem) => this.setState({ selectedItem })} />
                     <Column flexGrow={1}>
                         <HeaderComponent title={selectedItem} />
                         <Switch>
                             <div className='content'>
-                                <Route path="/overview/content" exact component={ContentComponent} />
+                                 <Route exact path='/' component={ContentComponent} />
                                 <Route path="/overview/profile" exact component={ProfileComponent} />
                                 <Route path="/overview/plans" exact component={SubscriptionComponent} />
                                 <Route path="/overview/bookings" exact component={BookingComponent} />

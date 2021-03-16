@@ -1,16 +1,13 @@
 import React from 'react';
 import { Column, Row } from 'simple-flexbox';
 import { StyleSheet, css } from 'aphrodite';
-import MenuItemComponent from '../menu-item/MenuItemComponent';
 import PropTypes from "prop-types";
 import { withRouter } from "react-router";
-import IconOverview from '../../../assets/icons/icon-overview.js';
-import IconTickets from '../../../assets/icons/icon-tickets';
-import IconIdeas from '../../../assets/icons/icon-ideas.js';
-import IconContacts from '../../../assets/icons/icon-contacts';
-import IconBurger from '../../../assets/icons/icon-burger';
-import Logo from '../../../assets/images/miniinsurance.png';
-import '../side-menu/side-menu.styles.scss';
+import {SideBarData} from './SideBarData';
+import IconBurger from '../../assets/icons/icon-burger';
+import Logo from '../../assets/images/miniinsurance.png';
+import '../sidebar/side-menu.styles.scss';
+import { SubMenu } from './SubMenu';
 const styles = StyleSheet.create({
     burgerIcon: {
         cursor: 'pointer',
@@ -22,13 +19,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#F7941D',
         width: 255,
         paddingTop: 32,
-        height: 'calc(100% - 32px)'
+        minHeight:'600px',
+        maxHeight: '700px',
     },
     containerMobile: {
         transition: 'left 0.5s, right 0.5s',
         position: 'absolute',
         width: 255,
-        height: 'calc(100% - 32px)',
+        minHeight:'600px',
+        maxHeight: '630px',
         zIndex: 901
     },
     mainContainer: {
@@ -76,9 +75,9 @@ class SidebarComponent extends React.Component {
         match: PropTypes.object.isRequired,
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired
-      };
+    };
     onItemClicked = (item) => {
-      
+
     }
 
     isMobile = () => window.innerWidth <= 768;
@@ -92,7 +91,7 @@ class SidebarComponent extends React.Component {
     }
 
     render() {
-        const {history } = this.props;
+        const { history } = this.props;
         const { expanded } = this.state;
         const isMobile = this.isMobile();
         console.log(expanded)
@@ -100,35 +99,18 @@ class SidebarComponent extends React.Component {
             <div style={{ position: 'relative' }}>
                 <Row className='mainContainer-menu' breakpoints={{ 768: css(styles.mainContainerMobile, (expanded && styles.mainContainerExpanded)) }}>
                     {(isMobile && !expanded) && this.renderBurger()}
-                    <Column style={{backgroundColor:'#F7941D'}} className={css(styles.container)} breakpoints={{ 768: css(styles.containerMobile, expanded ? styles.show : styles.hide) }}>
-                       <div style={{backgroundColor:'white',width:'80%',marginLeft:'18px'}}>
-                       <img src={Logo} />
-                       </div>
+                    <Column style={{ backgroundColor: '#F7941D', overflowX :'scroll' }} className={css(styles.container)} breakpoints={{ 768: css(styles.containerMobile, expanded ? styles.show : styles.hide) }}>
+                        <div style={{ backgroundColor: 'white', width: '80%', marginLeft: '18px' }}>
+                            <img src={Logo} />
+                        </div>
                         <Column className={css(styles.menuItemList)}>
-                            <MenuItemComponent
-                                title="Account" icon={IconOverview}
-                                onClick={() => history.push('/overview/content')}
-                                active={this.props.selectedItem === 'Overview'}
-                                
-                            />
-                            <MenuItemComponent
-                                title="Subscriptions" icon={IconTickets}
-                                onClick={() => history.push('/overview/plans')}
-                                active={this.props.selectedItem === 'Tickets'}
-                            />
-                               <MenuItemComponent
-                                title="Bookings" icon={IconTickets}
-                                onClick={() => history.push('/overview/bookings')}
-                                active={this.props.selectedItem === 'Bookings'}
-                            />
-                             <MenuItemComponent
-                                title="Vehicles" icon={IconTickets}
-                                onClick={() => history.push('/overview/vehicles')}
-                                active={this.props.selectedItem === 'Vehicles'}
-                            />
+                            {SideBarData.map((value) => {
+                                return <SubMenu {...value} key={value.index} />
+                            }
+                            )}
                         </Column>
                     </Column>
-                    {(isMobile && expanded)&&<div className={css(styles.outsideLayer)} onClick={this.toggleMenu}></div>}
+                    {(isMobile && expanded) && <div className={css(styles.outsideLayer)} onClick={this.toggleMenu}></div>}
                 </Row>
             </div>
         );
