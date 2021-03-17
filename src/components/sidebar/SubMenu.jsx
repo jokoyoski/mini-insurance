@@ -22,7 +22,7 @@ export const SubMenu = (props) => {
                 <span>{icon}</span>
                 <span style={{ display: 'inline-block', marginLeft: '3px' }}>{title}</span>
             </div>
-            <div   ref={content}  style={{ maxHeight: `${height}`,overflowX:'hidden'}}>
+            <div   ref={content}  style={{ maxHeight: `${height}`,overflowX:'hidden', transition: `max-height 0.5s`}}>
                 {subNav.map((item, index) => {
                    return <Link className='side-bar-link' to={item.path} key={item.index}>
                         <span className='side-bar-label'>{item.title}</span>

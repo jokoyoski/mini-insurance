@@ -1,0 +1,26 @@
+.messages{
+.message-text-box{
+    background-color: #FFF6EC;
+    height: 130px;
+    width: 50%;
+}
+.avatar-message{
+    display: flex;
+    flex-direction: row;
+}
+
+}
+
+
+
+.submit-button {
+    background-color:orange; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }

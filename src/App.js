@@ -10,6 +10,8 @@ import { ProfileComponent } from './components/profile/ProfileComponent';
 import { SubscriptionComponent } from './components/subscription/SubscriptionComponent';
 import { BookingComponent } from './components/bookings/BookingComponent';
 import VehicleListComponent from './components/vechicle/vehicle-list/VehicleListComponent';
+import MessageComponent from './components/messages/MessageComponent';
+import AddProfilecomponent from './components/profile/AddProfie/AddProfilecomponent';
 
 
 
@@ -43,6 +45,8 @@ class App extends React.Component {
                                 <Route path="/overview/plans" exact component={SubscriptionComponent} />
                                 <Route path="/overview/bookings" exact component={BookingComponent} />
                                 <Route path="/overview/vehicles" exact component={VehicleListComponent} />
+                                <Route path="/overview/messages" exact component={MessageComponent} />
+                                <Route path="/overview/addprofile" exact component={AddProfilecomponent} />
                             </div>
                         </Switch>
                     </Column>

@@ -24,7 +24,18 @@ export const SideBarData = [
                 title: 'Transactions',
                 path: '/overview/revenue',
                 icon: <AiIcons.AiFillHome />,
+            },
+            {
+                title: 'Vehicles',
+                path: '/overview/vehicles',
+                icon: <AiIcons.AiFillHome />,
+            },
+            {
+                title: 'Add Profile',
+                path: '/overview/addprofile',
+                icon: <AiIcons.AiFillHome />,
             }
+
 
 
         ]
@@ -108,7 +119,7 @@ export const SideBarData = [
             },
             {
                 title: 'Carts',
-                path: '/reports/radio',
+                path: '/overview/vehicles',
                 icon: <IoIcons.IoIosPaper />,
             },
             {
