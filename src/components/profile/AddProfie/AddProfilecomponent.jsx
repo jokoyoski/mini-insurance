@@ -68,33 +68,32 @@ export const AddProfilecomponent = () => {
             <div className='arrange'>
                 <div className='profile-section'>
                     <div className='pic-section'>
-                      <img style={{width:'100px',height:'100px',border:'2px solid orange',borderRadius:'50%'}}  src={CarPic}/>
+                      <img style={{width:'120px',height:'120px',border:'2px solid orange',borderRadius:'50%'}}  src={CarPic}/>
                         <p style={{marginTop:'20px'}}>Adeola Oladeinde</p>
                         <p style={{marginTop:'10px'}}>Account No: 2208497310</p>
                         <button style={{marginTop:'20px'}} className='submit-button'>Upload</button>
                     </div>
                     <div className='navigation-section'>
-                        <div style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px' }}>
-                            <p className><i class="fas fa-home"></i></p>
-                            <p>My Profile</p>
+                    <div style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px' }}>
+                            <p className><i class="far fa-user-circle"></i></p>
+                            <p style={{paddingLeft:'10px'}}>My Profile</p>
                         </div>
                         <div style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px' }}>
-                            <p className><i class="fas fa-home"></i></p>
-                            <p>Edit Profile</p>
+                            <p className><i class="far fa-edit"></i></p>
+                            <p style={{paddingLeft:'10px'}}>Edit Profile</p>
                         </div>
                         <div style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px' }}>
-                            <p className><i class="fas fa-home"></i></p>
-                            <p>Reset Password</p>
+                            <p className><i class="fas fa-lock"></i></p>
+                            <p style={{paddingLeft:'10px'}}>Reset Password</p>
                         </div>
                         <div style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px' }}>
-                            <p className><i class="fas fa-home"></i></p>
-                            <p>Manage My Vehicles</p>
+                            <p className><i class="fas fa-car"></i></p>
+                            <p style={{paddingLeft:'10px'}}>Manage My Vehicles</p>
                         </div>
                         <div style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px' }}>
-                            <p className><i class="fas fa-logout"></i></p>
-                            <p>Logout</p>
+                            <p className><i class="fas fa-sign-out-alt"></i></p>
+                            <p style={{paddingLeft:'10px'}}>Logout</p>
                         </div>
-
                     </div>
                 </div>
                 <div style={{ backgroundColor: 'white' }} className='form-section'>

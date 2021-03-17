@@ -12,6 +12,7 @@ import { BookingComponent } from './components/bookings/BookingComponent';
 import VehicleListComponent from './components/vechicle/vehicle-list/VehicleListComponent';
 import MessageComponent from './components/messages/MessageComponent';
 import AddProfilecomponent from './components/profile/AddProfie/AddProfilecomponent';
+import ResetPasswordComponent from './components/profile/ResetPassword/ResetPasswordComponent';
 
 
 
@@ -47,6 +48,7 @@ class App extends React.Component {
                                 <Route path="/overview/vehicles" exact component={VehicleListComponent} />
                                 <Route path="/overview/messages" exact component={MessageComponent} />
                                 <Route path="/overview/addprofile" exact component={AddProfilecomponent} />
+                                <Route path="/overview/resetpassword" exact component={ResetPasswordComponent} />
                             </div>
                         </Switch>
                     </Column>

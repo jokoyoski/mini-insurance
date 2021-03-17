@@ -67,6 +67,11 @@ export const SideBarData = [
                 title: 'Messages',
                 path: '/overview/messages',
                 icon: <IoIcons.IoIosPaper />,
+            },
+            {
+                title: 'Reset Password',
+                path: '/overview/resetpassword',
+                icon: <IoIcons.IoIosPaper />,
             }
 
 
