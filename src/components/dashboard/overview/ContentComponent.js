@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, css } from 'aphrodite/no-important';
+import { StyleSheet} from 'aphrodite/no-important';
 import MiniCardComponent from './MiniCardComponent';
 
 
@@ -49,33 +49,33 @@ function ContentComponent() {
                 <div className='inner-card-section'>
                     <div className='inner-top-text' style={{ display: 'flex', width: '50%' }}>
                         <p style={{ marginTop: '12px', marginRight: '7px' }} className='dot'></p>
-                        <p style={{ fontFamily: 'Muli', color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >₦5000</p>
+                        <p style={{color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >₦5000</p>
                     </div>
-                    <p style={{ fontFamily: 'Muli', color: 'gray', fontWeight: '200', lineHeight: '40px', fontSize: '0.8rem' }} >Available Balance</p>
+                    <p style={{ color: 'gray', fontWeight: '200', lineHeight: '40px', fontSize: '0.8rem' }} >Available Balance</p>
                 </div>
                 <div className='inner-card-section'>
                     <div className='inner-top-text' style={{ display: 'flex', width: '50%' }}>
                         <p style={{ marginTop: '12px', marginRight: '7px' }} className='dot'></p>
-                        <p style={{ fontFamily: 'Muli', color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >1st Nov. 2020</p>
+                        <p style={{color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >1st Nov. 2020</p>
                     </div>
-                    <p style={{ fontFamily: 'Muli', color: 'gray', fontWeight: '200', lineHeight: '40px', fontSize: '0.8rem' }} >Next Subscription Payment</p>
+                    <p style={{  color: 'gray', fontWeight: '200', lineHeight: '40px', fontSize: '0.8rem' }} >Next Subscription Payment</p>
 
                 </div>
                 <div className='inner-card-section'>
                     <div className='inner-top-text' style={{ display: 'flex', width: '50%' }}>
                         <p style={{ marginTop: '12px', marginRight: '7px' }} className='dot'></p>
-                        <p style={{ fontFamily: 'Muli', color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >50</p>
+                        <p style={{ color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >50</p>
 
                     </div>
-                    <p style={{ fontFamily: 'Muli', color: 'gray', fontWeight: '200', lineHeight: '40px', fontSize: '0.8rem' }} >Remaining Days</p>
+                    <p style={{ color: 'gray', fontWeight: '200', lineHeight: '40px', fontSize: '0.8rem' }} >Remaining Days</p>
 
                 </div>
                 <div className='inner-card-section'>
                     <div className='inner-top-text' style={{ display: 'flex', width: '50%' }}>
                         <p style={{ marginTop: '12px', marginRight: '7px' }} className='dot'></p>
-                        <p style={{ fontFamily: 'Muli', color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >50</p>
+                        <p style={{  color: 'black', fontWeight: '900', lineHeight: '40px', fontSize: '1.0rem' }} >50</p>
                     </div>
-                    <p style={{ fontFamily: 'Muli', color: 'gray', fontWeight: '200', lineHeight: '40px', fontSize: '0.8rem' }} >Orders</p>
+                    <p style={{color: 'gray', fontWeight: '200', lineHeight: '40px', fontSize: '0.8rem' }} >Orders</p>
                 </div>
 
             </div>

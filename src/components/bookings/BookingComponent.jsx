@@ -1,56 +1,66 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './booking.styles.scss';
+import BookingsData from '../../assets/mocks/Bookings_DATA.json';
+import Pagination from '../pagination/pagination';
 
-export const BookingComponent = () => {
-    return (
-        <div style={{ backgroundColor: '#fff2e5', height: '600px' }}>
-            <p className='my-bookings'>My Bookings</p>
-            <div style={{ backgroundColor: 'white', width: '90%', margin: '0 auto' }}>
-                <table style={{ width: '90%', borderCollapse: 'collapse', fontFamily: 'Muli', margin: '0 auto' }}>
+export class BookingComponent extends Component {
+    state = { allRecords: [], currentRecords: [], currentPage: null, totalPages: null }
 
-                    <tbody>
-                        <tr>
-                            <th>BookingId</th>
-                            <th>Service</th>
-                            <th>Location</th>
-                            <th>Date</th>
-                            <th>Status</th>
+    componentDidMount() {
+        const allRecords = BookingsData;
+        console.log(allRecords)
+        this.setState({ allRecords });
+    }
 
-                        </tr>
-                        <tr>
-                            <td>1234567890</td>
-                            <td>Road Side Repair</td>
-                            <td>Ajah</td>
-                            <td>1st March 2021</td>
-                            <td> <a href="#" class="table-button">Activate</a></td>
-                        </tr>
-                        <tr>
-                            <td>1234567890</td>
-                            <td>Road Side Repair</td>
-                            <td>Ajah</td>
-                            <td>1st March 2021</td>
-                            <td> <a href="#" class="table-button">Activate</a></td>
-                        </tr>
-                        <tr>
-                            <td>1234567890</td>
-                            <td>Road Side Repair</td>
-                            <td>Ajah</td>
-                            <td>1st March 2021</td>
-                            <td> <a href="#" class="table-button">Activate</a></td>
-                        </tr>
-                        <tr>
-                            <td>1234567890</td>
-                            <td>Road Side Repair</td>
-                            <td>Ajah</td>
-                            <td>1st March 2021</td>
-                            <td> <a href="#" class="table-button">Activate</a></td>
-                        </tr>
-                    </tbody>
+    onPageChanged = data => {
+        const { allRecords } = this.state;
+        const { currentPage, totalPages, pageLimit } = data;
+        const offset = (currentPage - 1) * pageLimit;
+        const currentRecords = allRecords.slice(offset, offset + pageLimit);
 
-                </table>
+        this.setState({ currentPage, currentRecords, totalPages });
+    }
+    render() {
+        const { allRecords, currentRecords } = this.state;
+        const totalRecords = allRecords.length;
+        if (totalRecords === 0) return null;
+        return (
+            <div style={{ backgroundColor: '#fff2e5', height: '600px' }}>
+                <p className='my-bookings'>My Bookings</p>
+                <div className="w-100  d-flex flex-row flex-wrap align-items-center justify-content-between">
+                    <div style={{ margin: '0 auto' }} className="d-flex flex-row py-4 align-items-center">
+                        <Pagination totalRecords={totalRecords} pageLimit={3} pageNeighbours={1} onPageChanged={this.onPageChanged} />
+                    </div>
+                </div>
+                <div style={{ backgroundColor: 'white', width: '90%', margin: '0 auto' }}>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>BookingId</th>
+                                <th>Service</th>
+                                <th>Location</th>
+                                <th> Date</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {currentRecords.map(record => {
+                                return (
+                                    <tr>
+                                        <td scope="row" data-label="Booking ID">{record.booking_id}</td>
+                                        <td data-label="Name">{record.service}</td>
+                                        <td data-label="Location">{record.location}</td>
+                                        <td data-label="Date">{record.date}</td>
+                                        <td data-label="Status"> <a href="#" class="table-button">Update</a></td>
+                                    </tr>
+                                )
+                            })}
+
+                        </tbody>
+                    </table>
+
+                </div>
             </div>
-
-
-        </div>
-    )
+        )
+    }
 }

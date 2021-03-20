@@ -4,7 +4,6 @@ import validate from '../../../formData/validate';
 import Input from '../../../components/Input/InputCompnent';
 import '../AddProfie/addprofile.styles.scss';
 import  CarPic from '../../../assets/images/car-pic.jpeg';
-import Button from '../../../components/Button/ButtonComponent';
 const initialState = {
     name: {
         value: '',
@@ -38,10 +37,7 @@ const initialState = {
         value: '',
         required: true
     },
-    datecreated: {
-        value: '',
-        required: true
-    },
+   
 
 }
 export const AddProfilecomponent = () => {

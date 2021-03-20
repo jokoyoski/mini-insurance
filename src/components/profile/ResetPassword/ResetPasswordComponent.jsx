@@ -4,7 +4,6 @@ import validate from '../../../formData/validate';
 import Input from '../../../components/Input/InputCompnent';
 import '../ResetPassword/reset-password.scss';
 import  CarPic from '../../../assets/images/car-pic.jpeg';
-import Button from '../../../components/Button/ButtonComponent';
 const initialState = {
     oldpassword: {
         value: '',

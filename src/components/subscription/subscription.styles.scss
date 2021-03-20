@@ -5,12 +5,12 @@
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
-    font-family: "Muli";
     font-size: 0.6rem;
     display: inline-block;
     margin: 4px 2px;
     width: $width;
     margin: 0 auto;
+    height:'50px';
     cursor: pointer;
 }
 
@@ -18,13 +18,11 @@
     .subscription-packages {
         color: #f7941d;
         padding: 20px;
-        font-family: "Muli";
     }
     .package {
         display: flex;
         width: 85%;
         justify-content: space-between;
-        font-family: "Muli";
         font-size: 0.7rem;
         padding: 20px;
 
@@ -34,7 +32,6 @@
                 margin: 8px;
             }
             border-radius: 4px;
-            font-family: "Muli";
             display: flex;
             width: calc(100% / 2 - 5px);
             margin-bottom: 5px;
@@ -60,32 +57,6 @@
         .subscription-history-label {
             color: #f7941d;
             padding: 20px;
-            font-family: "Muli";
-        }
-        td tr {
-            border: 1px solid #ddd;
-            padding: 8px;
-            font-size: 0.7rem;
-        }
-        tr {
-            height: 65px;
-            font-size: 0.7rem;
-        }
-        th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            font-size: 0.7rem;
-            background-color: white;
-            color: black;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-            background-color: #fff2e5;
-        }
-
-        tr:hover {
-            background-color: #ddd;
         }
     }
 }
@@ -95,14 +66,12 @@
         .subscription-packages {
             color: #f7941d;
             padding: 20px;
-            font-family: "Muli";
         }
         .package {
             display: flex;
             margin: 0 auto;
             width: 90%;
             justify-content: space-between;
-            font-family: "Muli";
             font-size: 0.7rem;
             flex-direction: column;
             padding: 20px;
@@ -111,7 +80,6 @@
                     margin: 8px;
                 }
                 border-radius: 4px;
-                font-family: "Muli";
                 display: flex;
                 width: 100%;
                 background-color: #fff2e5;
@@ -137,30 +105,6 @@
             .subscription-history-label {
                 color: #f7941d;
                 padding: 20px;
-                font-family: "Muli";
-            }
-            td tr {
-                border: 1px solid #ddd;
-                padding: 8px;
-            }
-            tr {
-                height: 65px;
-                font-size: 0.7rem;
-            }
-            th {
-                padding-top: 12px;
-                padding-bottom: 12px;
-                text-align: left;
-                background-color: white;
-                color: black;
-                font-size: 0.7rem;
-            }
-            tr:nth-child(even) {
-                background-color: #fff2e5;
-            }
-
-            tr:hover {
-                background-color: #ddd;
             }
         }
     }
@@ -175,4 +119,103 @@
     .table-button {
         @include button(50%, #1abc9c);
     }
+}
+
+table {
+    border: 1px solid white;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    margin: 0 auto;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: 0.5em 0 0.75em;
+}
+
+table tr {
+    background-color:white;
+    border:white;
+    padding: 0.35em;
+}
+
+table th,
+table td {
+    padding: 0.625em;
+    text-align: center;
+
+}
+tr{
+    height: 60px;
+}
+tr:nth-child(even) {
+    background-color: #FFF2E5;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+
+table th {
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        height: 303px;
+        border-bottom: 3px solid white;
+        display: block;
+        margin-bottom: 0.625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 0.8em;
+        text-align: right;
+    }
+
+    table td::before {
+        /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}
+
+.table-button {
+    @include button(100%, #1abc9c);
 }

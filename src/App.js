@@ -4,15 +4,16 @@ import { Column, Row } from 'simple-flexbox';
 import SidebarComponent from './components/sidebar/SidebarComponent';
 import HeaderComponent from './components/header/HeaderComponent';
 import ContentComponent from './components/dashboard/overview/ContentComponent';
-import { BrowserRouter as Router, Switch, Route ,Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import { ProfileComponent } from './components/profile/ProfileComponent';
-import { SubscriptionComponent } from './components/subscription/SubscriptionComponent';
+import SubscriptionComponent  from './components/subscription/SubscriptionComponent';
 import { BookingComponent } from './components/bookings/BookingComponent';
 import VehicleListComponent from './components/vechicle/vehicle-list/VehicleListComponent';
 import MessageComponent from './components/messages/MessageComponent';
 import AddProfilecomponent from './components/profile/AddProfie/AddProfilecomponent';
 import ResetPasswordComponent from './components/profile/ResetPassword/ResetPasswordComponent';
+
 
 
 
@@ -35,7 +36,7 @@ class App extends React.Component {
         return (
 
             <Router>
-                <Row className='container'>
+                <Row className='side-container'>
                 <SidebarComponent selectedItem={selectedItem} onChange={(selectedItem) => this.setState({ selectedItem })} />
                     <Column flexGrow={1}>
                         <HeaderComponent title={selectedItem} />
