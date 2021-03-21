@@ -94,7 +94,6 @@ class SidebarComponent extends React.Component {
         const { history } = this.props;
         const { expanded } = this.state;
         const isMobile = this.isMobile();
-        console.log(expanded)
         return (
             <div style={{ position: 'relative' }}>
                 <Row className='mainContainer-menu' breakpoints={{ 768: css(styles.mainContainerMobile, (expanded && styles.mainContainerExpanded)) }}>
@@ -105,7 +104,7 @@ class SidebarComponent extends React.Component {
                         </div>
                         <Column className={css(styles.menuItemList)}>
                             {SideBarData.map((value) => {
-                                return <SubMenu {...value} key={value.index} />
+                                return <SubMenu {...value} key={value.title} />
                             }
                             )}
                         </Column>

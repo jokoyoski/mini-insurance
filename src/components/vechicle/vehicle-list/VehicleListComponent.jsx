@@ -50,13 +50,13 @@ class VehicleListComponent extends Component {
                                 {currentRecords.map(record => {
                                     return (
                                         <tr>
-                                            <td  scope="row" data-label="Subscription ID">{record.id}</td>
-                                            <td data-label="Picture"><img src={Car} style={{width:'70px'}} alt="car"/></td>
-                                            <td data-label="Date">{record.vehicle_name}</td>
-                                            <td data-label="Due Date">{record.vehicle_number}</td>
-                                            <td data-label="Status">{record.vehicle_status}</td>
-                                            <td data-label="Update"> <a href="#" class="update-button">Update</a></td>
-                                            <td data-label="Remove"><a style={{ color: 'orange' }}>Remove</a></td>
+                                            <td style={{fontSize:'0.7rem'}}  data-label="Subscription ID">{record.id}</td>
+                                            <td style={{fontSize:'0.7rem'}} data-label="Picture"><img src={Car} style={{width:'70px'}} alt="car"/></td>
+                                            <td style={{fontSize:'0.7rem'}} data-label="Date">{record.vehicle_name}</td>
+                                            <td style={{fontSize:'0.7rem'}} data-label="Due Date">{record.vehicle_number}</td>
+                                            <td style={{fontSize:'0.7rem'}} data-label="Status">{record.vehicle_status}</td>
+                                            <td style={{fontSize:'0.7rem'}} data-label="Update"> <a href="#" class="update-button">Update</a></td>
+                                            <td style={{fontSize:'0.7rem'}} data-label="Remove"><a style={{ color: 'orange' }}>Remove</a></td>
                                         </tr>
                                     )
                                 })}

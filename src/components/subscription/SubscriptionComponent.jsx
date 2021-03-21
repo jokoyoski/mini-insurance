@@ -19,7 +19,6 @@ class SubscriptionComponent extends Component {
         const { currentPage, totalPages, pageLimit } = data;
         const offset = (currentPage - 1) * pageLimit;
         const currentRecords = allRecords.slice(offset, offset + pageLimit);
-
         this.setState({ currentPage, currentRecords, totalPages });
     }
 
@@ -29,7 +28,7 @@ class SubscriptionComponent extends Component {
         if (totalRecords === 0) return null;
         return (
             <div style={{ backgroundColor: '#FFF2E5', height: '600px', overflowX: 'scroll' }} className='subscription'>
-              <div style={{margin:'0 auto',width:'95%',backgroundColor:'white'}}>
+              <div style={{margin:'30px auto',width:'95%',backgroundColor:'white'}}>
               <div>
                     <p className='subscription-packages'>Subscription Packages</p>
                     <div className='package'>
@@ -46,7 +45,7 @@ class SubscriptionComponent extends Component {
                                     <p>TyreChange</p>
                                     <p>Battery JumpStart</p>
                                 </div>
-                                <a href="#" style={{ marginBottom: '30px' }} class="button">Subscribe Now</a>
+                                <a href="#" style={{ marginBottom: '30px' ,fontWeight:'800' }} class="button">Subscribe Now</a>
                             </div>
 
                         </div>
@@ -60,8 +59,9 @@ class SubscriptionComponent extends Component {
                                 <div>
                                     <p>From Accident Scene to Auto Repair Shop</p>
                                 </div>
-                                <a style={{ marginBottom: '30px' }} href="#" class="button">Subscribe Now</a>
-                            </div>
+                                <a href="#" style={{ marginBottom: '30px' ,fontWeight:'800' }} class="button">Subscribe Now</a>
+                           
+                              </div>
 
                         </div>
 
@@ -92,12 +92,11 @@ class SubscriptionComponent extends Component {
                                 {currentRecords.map(record => {
                                     return (
                                         <tr>
-                                            <td scope="row" data-label="Subscription ID">{record.subscription_id}</td>
-                                            <td data-label="Name">{record.name}</td>
-                                            <td data-label="Date">{record.date}</td>
-                                            <td data-label="Due Date">{record.expiry_date}</td>
-                                            <td data-label="Update"> <a href="#" class="table-button">Update</a></td>
-    
+                                            <td style={{fontSize:'0.7rem'}} scope="row" data-label="Subscription ID">{record.subscription_id}</td>
+                                            <td style={{fontSize:'0.7rem'}} data-label="Name">{record.name}</td>
+                                            <td style={{fontSize:'0.7rem'}} data-label="Date">{record.date}</td>
+                                            <td style={{fontSize:'0.7rem'}} data-label="Due Date">{record.expiry_date}</td>
+                                            <td style={{fontSize:'0.7rem'}} data-label="Update"> <a href="#" class="table-button">Update</a></td>
                                         </tr>
                                     )
                                 })}

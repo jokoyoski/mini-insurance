@@ -20,7 +20,7 @@ const range = (from, to, step = 1) => {
   return range;
 }
 class Pagination extends Component {
-    
+
   constructor(props) {
     super(props);
     const { totalRecords = null, pageLimit = 30, pageNeighbours = 0 } = props;
@@ -37,6 +37,13 @@ class Pagination extends Component {
 
     this.state = { currentPage: 1 };
   }
+  componentDidUpdate(props) {
+    
+    console.log(this.props)
+    this.totalPages = Math.ceil(this.totalRecords / this.pageLimit);
+    console.log(props.totalRecords)
+  }
+
   fetchPageNumbers = () => {
     const totalPages = this.totalPages;
     const currentPage = this.state.currentPage;
@@ -91,7 +98,7 @@ class Pagination extends Component {
 
     return range(1, totalPages);
   }
-  
+
 
   render() {
     if (!this.totalRecords || this.totalPages === 1) return null;
@@ -103,7 +110,7 @@ class Pagination extends Component {
       <Fragment>
         <nav aria-label="Countries Pagination">
           <ul className="pagination">
-            { pages.map((page, index) => {
+            {pages.map((page, index) => {
 
               if (page === LEFT_PAGE) return (
                 <li key={index} className="page-item">
@@ -124,12 +131,12 @@ class Pagination extends Component {
               );
 
               return (
-                <li key={index} className={`page-item${ currentPage === page ? ' active' : ''}`}>
-                  <a className="page-link" href="#" onClick={ this.handleClick(page) }>{ page }</a>
+                <li key={index} className={`page-item${currentPage === page ? ' active' : ''}`}>
+                  <a className="page-link" href="#" onClick={this.handleClick(page)}>{page}</a>
                 </li>
               );
 
-            }) }
+            })}
 
           </ul>
         </nav>
@@ -169,7 +176,7 @@ class Pagination extends Component {
   }
 }
 
- 
+
 
 
 

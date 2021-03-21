@@ -32,7 +32,7 @@ export class BookingComponent extends Component {
                         <Pagination totalRecords={totalRecords} pageLimit={3} pageNeighbours={1} onPageChanged={this.onPageChanged} />
                     </div>
                 </div>
-                <div style={{ backgroundColor: 'white', width: '90%', margin: '0 auto' }}>
+                <div style={{ backgroundColor: 'white', width: '96%', margin: '0 auto' }}>
                     <table>
                         <thead>
                             <tr>
@@ -47,11 +47,11 @@ export class BookingComponent extends Component {
                             {currentRecords.map(record => {
                                 return (
                                     <tr>
-                                        <td scope="row" data-label="Booking ID">{record.booking_id}</td>
-                                        <td data-label="Name">{record.service}</td>
-                                        <td data-label="Location">{record.location}</td>
-                                        <td data-label="Date">{record.date}</td>
-                                        <td data-label="Status"> <a href="#" class="table-button">Update</a></td>
+                                        <td style={{fontSize:'0.7rem'}} scope="row" data-label="Booking ID">{record.booking_id}</td>
+                                        <td style={{fontSize:'0.7rem'}} data-label="Name">{record.service}</td>
+                                        <td style={{fontSize:'0.7rem'}} data-label="Location">{record.location}</td>
+                                        <td style={{fontSize:'0.7rem'}} data-label="Date">{record.date}</td>
+                                        <td style={{fontSize:'0.7rem'}} data-label="Status"> <a href="#" class="table-button">Update</a></td>
                                     </tr>
                                 )
                             })}

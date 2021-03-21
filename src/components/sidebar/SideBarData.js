@@ -10,7 +10,7 @@ export const SideBarData = [
     {
         title: 'Account',
         path: '/overview',
-        icon: <i class="far fa-user-circle"></i>,
+        icon: <i className="far fa-user-circle"></i>,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
         subNav: [
@@ -18,7 +18,7 @@ export const SideBarData = [
             {
                 title: 'My Profile',
                 path: '/',
-                icon: <i class="far fa-user-circle"></i>
+                icon: <i className="far fa-user-circle"></i>
             },
             {
                 title: 'Transactions',
@@ -43,7 +43,7 @@ export const SideBarData = [
     {
         title: 'Main',
         path: '/reports/oke',
-        icon: <i class="fas fa-home"></i>,
+        icon: <i className="fas fa-home"></i>,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
         subNav: [
@@ -80,7 +80,7 @@ export const SideBarData = [
     {
         title: 'Tickets',
         path: '/reports/oke',
-        icon: <i class="fas fa-ticket-alt"></i>,
+        icon: <i className="fas fa-ticket-alt"></i>,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
         subNav: [
@@ -112,7 +112,7 @@ export const SideBarData = [
     {
         title: 'AutoShop',
         path: '/reports/oke',
-        icon: <i class="fas fa-store"></i>,
+        icon: <i className="fas fa-store"></i>,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
         subNav: [
@@ -133,8 +133,8 @@ export const SideBarData = [
                 icon: <IoIcons.IoIosPaper />,
             },
             {
-                title: 'Orders',
-                path: '/overview/messages',
+                title: 'AutoShop',
+                path: '/overview/autoshop',
                 icon: <IoIcons.IoIosPaper />,
             },
             {

@@ -86,21 +86,21 @@ function ContentComponent() {
                 </div>
                 <div className='transaction-history'>
                     <div className='transaction-history-see-all'>
-                        <p>Transaction history</p>
-                        <p style={{ color: 'gray' }}>See All</p>
+                        <p style={{color:'#414042',fontWeight:'600'}}>Transaction history</p>
+                        <p style={{ color: '#696A7D' ,fontSize:'0.7rem' }}>See All</p>
                     </div>
                     <div className='trans-history-list'>
                         <div className='trans-history'>
                             <div className='name-picture'>
                                 <img src="https://avatars3.githubusercontent.com/u/21162888?s=460&v=4" alt="avatar" className='avatar cursor-pointer' />
                                 <div className='name-address'>
-                                    <p>Jokoyoski Makanga</p>
+                                    <p style={{fontWeight:'900',marginBottom:'0px'}}>Jokoyoski Makanga</p>
                                     <p>01 Nov. 2022</p>
                                 </div>
                             </div>
                             <div className='history'>
                                 <div className='history-type'>
-                                    <p>₦3222,00</p>
+                                    <p  style={{marginBottom:'0px'}}>₦3222,00</p>
                                     <p>Subscription Payment</p>
                                 </div>
                             </div>
@@ -109,13 +109,13 @@ function ContentComponent() {
                             <div className='name-picture'>
                                 <img src="https://avatars3.githubusercontent.com/u/21162888?s=460&v=4" alt="avatar" className='avatar cursor-pointer' />
                                 <div className='name-address'>
-                                    <p>Jokoyoski Makanga</p>
+                                    <p style={{fontWeight:'900',marginBottom:'0px'}}>Jokoyoski Makanga</p>
                                     <p>01 Nov. 2022</p>
                                 </div>
                             </div>
                             <div className='history'>
                                 <div className='history-type'>
-                                    <p>₦3222,00</p>
+                                    <p  style={{marginBottom:'0px'}}>₦3222,00</p>
                                     <p>Subscription Payment</p>
                                 </div>
                             </div>
@@ -124,13 +124,13 @@ function ContentComponent() {
                             <div className='name-picture'>
                                 <img src="https://avatars3.githubusercontent.com/u/21162888?s=460&v=4" alt="avatar" className='avatar cursor-pointer' />
                                 <div className='name-address'>
-                                    <p>Jokoyoski Makanga</p>
+                                    <p style={{fontWeight:'900',marginBottom:'0px'}}>Jokoyoski Makanga</p>
                                     <p>01 Nov. 2022</p>
                                 </div>
                             </div>
                             <div className='history'>
                                 <div className='history-type'>
-                                    <p>₦3222,00</p>
+                                    <p  style={{marginBottom:'0px'}}>₦3222,00</p>
                                     <p>Subscription Payment</p>
                                 </div>
                             </div>
@@ -139,13 +139,13 @@ function ContentComponent() {
                             <div className='name-picture'>
                                 <img src="https://avatars3.githubusercontent.com/u/21162888?s=460&v=4" alt="avatar" className='avatar cursor-pointer' />
                                 <div className='name-address'>
-                                    <p>Jokoyoski Makanga</p>
+                                    <p style={{fontWeight:'900',marginBottom:'0px'}}>Jokoyoski Makanga</p>
                                     <p>01 Nov. 2022</p>
                                 </div>
                             </div>
                             <div className='history'>
                                 <div className='history-type'>
-                                    <p>₦3222,00</p>
+                                    <p  style={{marginBottom:'0px'}}>₦3222,00</p>
                                     <p>Subscription Payment</p>
                                 </div>
                             </div>
@@ -154,13 +154,13 @@ function ContentComponent() {
                             <div className='name-picture'>
                                 <img src="https://avatars3.githubusercontent.com/u/21162888?s=460&v=4" alt="avatar" className='avatar cursor-pointer' />
                                 <div className='name-address'>
-                                    <p>Jokoyoski Makanga</p>
+                                    <p style={{fontWeight:'900',marginBottom:'0px'}}>Jokoyoski Makanga</p>
                                     <p>01 Nov. 2022</p>
                                 </div>
                             </div>
                             <div className='history'>
                                 <div className='history-type'>
-                                    <p>₦3222,00</p>
+                                    <p  style={{marginBottom:'0px'}}>₦3222,00</p>
                                     <p>Subscription Payment</p>
                                 </div>
                             </div>
@@ -169,13 +169,13 @@ function ContentComponent() {
                             <div className='name-picture'>
                                 <img src="https://avatars3.githubusercontent.com/u/21162888?s=460&v=4" alt="avatar" className='avatar cursor-pointer' />
                                 <div className='name-address'>
-                                    <p>Jokoyoski Makanga</p>
+                                    <p style={{fontWeight:'900',marginBottom:'0px'}}>Jokoyoski Makanga</p>
                                     <p>01 Nov. 2022</p>
                                 </div>
                             </div>
                             <div className='history'>
                                 <div className='history-type'>
-                                    <p>₦3222,00</p>
+                                    <p  style={{marginBottom:'0px'}}>₦3222,00</p>
                                     <p>Subscription Payment</p>
                                 </div>
                             </div>
@@ -184,13 +184,13 @@ function ContentComponent() {
                             <div className='name-picture'>
                                 <img src="https://avatars3.githubusercontent.com/u/21162888?s=460&v=4" alt="avatar" className='avatar cursor-pointer' />
                                 <div className='name-address'>
-                                    <p>Jokoyoski Makanga</p>
+                                    <p style={{fontWeight:'900',marginBottom:'0px'}}>Jokoyoski Makanga</p>
                                     <p>01 Nov. 2022</p>
                                 </div>
                             </div>
                             <div className='history'>
                                 <div className='history-type'>
-                                    <p>₦3222,00</p>
+                                    <p  style={{marginBottom:'0px'}}>₦3222,00</p>
                                     <p>Subscription Payment</p>
                                 </div>
                             </div>
@@ -199,13 +199,13 @@ function ContentComponent() {
                             <div className='name-picture'>
                                 <img src="https://avatars3.githubusercontent.com/u/21162888?s=460&v=4" alt="avatar" className='avatar cursor-pointer' />
                                 <div className='name-address'>
-                                    <p>Jokoyoski Makanga</p>
+                                    <p style={{fontWeight:'900',marginBottom:'0px'}}>Jokoyoski Makanga</p>
                                     <p>01 Nov. 2022</p>
                                 </div>
                             </div>
                             <div className='history'>
                                 <div className='history-type'>
-                                    <p>₦3222,00</p>
+                                    <p  style={{marginBottom:'0px'}}>₦3222,00</p>
                                     <p>Subscription Payment</p>
                                 </div>
                             </div>
@@ -214,13 +214,13 @@ function ContentComponent() {
                             <div className='name-picture'>
                                 <img src="https://avatars3.githubusercontent.com/u/21162888?s=460&v=4" alt="avatar" className='avatar cursor-pointer' />
                                 <div className='name-address'>
-                                    <p>Jokoyoski Makanga</p>
+                                    <p style={{fontWeight:'900',marginBottom:'0px'}}>Jokoyoski Makanga</p>
                                     <p>01 Nov. 2022</p>
                                 </div>
                             </div>
                             <div className='history'>
                                 <div className='history-type'>
-                                    <p>₦3222,00</p>
+                                    <p  style={{marginBottom:'0px'}}>₦3222,00</p>
                                     <p>Subscription Payment</p>
                                 </div>
                             </div>
@@ -229,13 +229,13 @@ function ContentComponent() {
                             <div className='name-picture'>
                                 <img src="https://avatars3.githubusercontent.com/u/21162888?s=460&v=4" alt="avatar" className='avatar cursor-pointer' />
                                 <div className='name-address'>
-                                    <p>Jokoyoski Makanga</p>
+                                    <p style={{fontWeight:'900',marginBottom:'0px'}}>Jokoyoski Makanga Melantia</p>
                                     <p>01 Nov. 2022</p>
                                 </div>
                             </div>
                             <div className='history'>
                                 <div className='history-type'>
-                                    <p>₦3222,00</p>
+                                    <p  style={{marginBottom:'0px'}}>₦3222,00</p>
                                     <p>Subscription Payment</p>
                                 </div>
                             </div>
@@ -244,13 +244,13 @@ function ContentComponent() {
                             <div className='name-picture'>
                                 <img src="https://avatars3.githubusercontent.com/u/21162888?s=460&v=4" alt="avatar" className='avatar cursor-pointer' />
                                 <div className='name-address'>
-                                    <p>Jokoyoski Makanga</p>
+                                    <p style={{fontWeight:'900',marginBottom:'0px'}}>Jokoyoski Makanga</p>
                                     <p>01 Nov. 2022</p>
                                 </div>
                             </div>
                             <div className='history'>
                                 <div className='history-type'>
-                                    <p>₦3222,00</p>
+                                    <p  style={{marginBottom:'0px'}}>₦3222,00</p>
                                     <p>Subscription Payment</p>
                                 </div>
                             </div>

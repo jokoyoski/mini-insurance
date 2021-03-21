@@ -13,10 +13,7 @@ import VehicleListComponent from './components/vechicle/vehicle-list/VehicleList
 import MessageComponent from './components/messages/MessageComponent';
 import AddProfilecomponent from './components/profile/AddProfie/AddProfilecomponent';
 import ResetPasswordComponent from './components/profile/ResetPassword/ResetPasswordComponent';
-
-
-
-
+import AutoShopComponent  from './components/autoshop/AutoShopComponent';
 class App extends React.Component {
 
     state = { selectedItem: 'Tickets' };
@@ -50,6 +47,7 @@ class App extends React.Component {
                                 <Route path="/overview/messages" exact component={MessageComponent} />
                                 <Route path="/overview/addprofile" exact component={AddProfilecomponent} />
                                 <Route path="/overview/resetpassword" exact component={ResetPasswordComponent} />
+                                <Route path="/overview/autoshop" exact component={AutoShopComponent} />
                             </div>
                         </Switch>
                     </Column>

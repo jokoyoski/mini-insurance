@@ -7,7 +7,7 @@
         padding: 7px;
         .inner-card-section {
             display: flex;
-            height: 130px;
+            height: 90px;
             width: 50%;
             background-color: white;
             flex-flow: column wrap;
@@ -16,6 +16,7 @@
             border: 1px solid rgb(223, 224, 235);
             .inner-top-text {
                 justify-content: center;
+                height: 20px;
             }
         }
     }
@@ -31,8 +32,8 @@
             background-color: #fff2e5;
         }
         .transaction-history {
-            margin-top: 15px;
-            width: 100%;
+            margin: 0 auto;
+            width: 90%;
             height: 400px;
             background-color: white;
             display: flex;
@@ -41,6 +42,8 @@
                 padding: 5px;
                 display: flex;
                 flex-direction: row;
+                font-size: 0.7rem;
+                color: #414042;
                 justify-content: space-between;
             }
             .trans-history-list {
@@ -54,7 +57,6 @@
                         flex-direction: row;
                         width: 35%;
                         font-size: 0.65rem;
-                        justify-content: space-between;
                         .name-address {
                             display: flex;
                             flex-direction: column;
@@ -87,7 +89,7 @@
             flex-flow: row wrap;
             .inner-card-section {
                 display: flex;
-                height: 130px;
+                height: 90px;
                 width: 25%;
                 flex-flow: column wrap;
                 justify-content: center;
@@ -106,9 +108,9 @@
                 background-color: #fff2e5;
             }
             .transaction-history {
-                flex: 1 0 45%;
+                flex: 1 0 40%;
                 height: 400px;
-                margin-left: 70px;
+                margin-right: 20px;
                 background-color: white;
                 display: flex;
             }

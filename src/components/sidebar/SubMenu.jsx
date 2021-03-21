@@ -11,7 +11,7 @@ export const SubMenu = (props) => {
           );
     }
     const content = useRef(null);
-    const { item, title, subNav, icon} = props;
+    const { title, subNav, icon} = props;
     return (
         <div>
             <div className='menu-bar' style={{ display: 'flex', fontFamily: 'Muli', cursor: 'pointer', color: 'white', fontSize: '0.9rem', marginTop: '0.4rem', padding: '8px' }} onClick={(e) => {
@@ -23,7 +23,8 @@ export const SubMenu = (props) => {
             </div>
             <div   ref={content}  style={{ maxHeight: `${height}`,overflowX:'hidden', transition: `max-height 0.8s`}}>
                 {subNav.map((item, index) => {
-                   return <Link className='side-bar-link' to={item.path} key={item.index}>
+
+                   return <Link className='side-bar-link' to={item.path} key={item.title}>
                         <span className='side-bar-label'>{item.title}</span>
                     </Link>
                 })}
