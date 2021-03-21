@@ -3,8 +3,7 @@ $error-color: #e70f0f;
 $border-color: #eee;
 
 .form {
-    padding-top: 40px;
-
+   
     &__group {
         margin: 20px;
         width: 50%;
@@ -72,45 +71,25 @@ $border-color: #eee;
 }
 
 .add-profile-container {
+    flex:1 1 45%;
+    height: 700px;
     .subscription-history-label {
         color: #f7941d;
         padding: 20px;
     }
-    .arrange {
-        display: flex;
-        flex-direction: row;
-        .profile-section {
-            flex: 0 0 40%;
-            display: flex;
-            flex-direction: column;
-            margin: 10px 5px 10px 3px;
-            justify-content: space-between;
-            .pic-section {
-                height: 350px;
-                margin-left: 20px;
-                background-color: white;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-            .navigation-section {
-                height: 350px;
-                margin-left: 20px;
-                margin-top: 20px;
-                color: gray;
-                background-color: white;
-                display: flex;
-                flex-direction: column;
-            }
-        }
+   
+    
         .form-section {
             flex: 1 0 0 50%;
-            margin:  10px 20px 10px 3px;
+            height:800px;
             .form {
                 .row-form {
                     display: flex;
                     width: 100%;
+                }
+                .row-form-last {
+                    display: flex;
+                    width: 50%;
                 }
             }
             
@@ -127,5 +106,5 @@ $border-color: #eee;
             display: inline-block;
             font-size: 16px;
         }
-    }
+    
 }

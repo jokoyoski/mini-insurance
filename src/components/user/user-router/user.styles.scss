@@ -1,0 +1,23 @@
+
+.main-section{
+    background-color: #fff2e5;
+    .profile-page {
+        margin-bottom: 0px;
+        color: #f7941d;
+        padding: 20px;
+    }
+
+    .arrange {
+        display: flex;
+        flex-direction: row;
+        
+        .profile-area{
+            flex: 0 0 40%;
+        }
+        .content{
+            flex:  1 1 40%;
+            height: 900px;
+        }
+    }
+    
+}

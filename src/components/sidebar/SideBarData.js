@@ -32,7 +32,7 @@ export const SideBarData = [
             },
             {
                 title: 'Add Profile',
-                path: '/overview/addprofile',
+                path: '/user/addprofile',
                 icon: <AiIcons.AiFillHome />,
             }
 
@@ -70,7 +70,7 @@ export const SideBarData = [
             },
             {
                 title: 'Reset Password',
-                path: '/overview/resetpassword',
+                path: '/user/resetpassword',
                 icon: <IoIcons.IoIosPaper />,
             }
 

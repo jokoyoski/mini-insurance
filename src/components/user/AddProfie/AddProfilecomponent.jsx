@@ -1,8 +1,8 @@
 import React from 'react'
 import useForm from '../../../formData/useForm';
 import validate from '../../../formData/validate';
-import Input from '../../../components/Input/InputCompnent';
-import '../AddProfie/addprofile.styles.scss';
+import Input from '../../Input/InputCompnent';
+import './addprofile.styles.scss';
 import  CarPic from '../../../assets/images/car-pic.jpeg';
 const initialState = {
     name: {
@@ -40,7 +40,7 @@ const initialState = {
    
 
 }
-export const AddProfilecomponent = () => {
+export const AddProfileComponent = () => {
     const { formData, errors, changeHandler, setErrors } = useForm(initialState, validate);
 
     const submitHandler = (e) => {
@@ -59,41 +59,9 @@ export const AddProfilecomponent = () => {
         console.log(formData.name.value)
     }
     return (
-        <div style={{ backgroundColor: '#fff2e5' }} className="add-profile-container">
-            <p className='subscription-history-label'>Profile Page</p>
-            <div className='arrange'>
-                <div className='profile-section'>
-                    <div className='pic-section'>
-                      <img style={{width:'120px',height:'120px',border:'2px solid orange',borderRadius:'50%'}}  src={CarPic}/>
-                        <p style={{marginTop:'20px'}}>Adeola Oladeinde</p>
-                        <p style={{marginTop:'10px'}}>Account No: 2208497310</p>
-                        <button style={{marginTop:'20px'}} className='submit-button'>Upload</button>
-                    </div>
-                    <div className='navigation-section'>
-                    <div style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px' }}>
-                            <p className><i class="far fa-user-circle"></i></p>
-                            <p style={{paddingLeft:'10px'}}>My Profile</p>
-                        </div>
-                        <div style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px' }}>
-                            <p className><i class="far fa-edit"></i></p>
-                            <p style={{paddingLeft:'10px'}}>Edit Profile</p>
-                        </div>
-                        <div style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px' }}>
-                            <p className><i class="fas fa-lock"></i></p>
-                            <p style={{paddingLeft:'10px'}}>Reset Password</p>
-                        </div>
-                        <div style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px' }}>
-                            <p className><i class="fas fa-car"></i></p>
-                            <p style={{paddingLeft:'10px'}}>Manage My Vehicles</p>
-                        </div>
-                        <div style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px' }}>
-                            <p className><i class="fas fa-sign-out-alt"></i></p>
-                            <p style={{paddingLeft:'10px'}}>Logout</p>
-                        </div>
-                    </div>
-                </div>
+        <div className="add-profile-container">
                 <div style={{ backgroundColor: 'white' }} className='form-section'>
-                    <form style={{ fontFamily: 'Muli' }} className="form" onSubmit={submitHandler}>
+                    <form  className="form" onSubmit={submitHandler}>
                         <p className='subscription-history-label'>My Profile</p>
                         <div className='row-form'>
                             <Input
@@ -168,7 +136,7 @@ export const AddProfilecomponent = () => {
                                 error={errors.datecreate}
                             />
                         </div>
-                        <div className='row-form'>
+                        <div className='row-form-last'>
                             <Input
                                 label="Subscription Plan"
                                 name="subscriptionplan"
@@ -181,8 +149,7 @@ export const AddProfilecomponent = () => {
                     </form>
                 </div>
             </div>
-        </div>
     )
 }
 
-export default AddProfilecomponent
+export default AddProfileComponent
