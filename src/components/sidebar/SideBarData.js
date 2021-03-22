@@ -21,11 +21,6 @@ export const SideBarData = [
                 icon: <i className="far fa-user-circle"></i>
             },
             {
-                title: 'Transactions',
-                path: '/overview/revenue',
-                icon: <AiIcons.AiFillHome />,
-            },
-            {
                 title: 'Vehicles',
                 path: '/overview/vehicles',
                 icon: <AiIcons.AiFillHome />,
@@ -53,19 +48,10 @@ export const SideBarData = [
                 path: '/overview/plans',
                 icon: <IoIcons.IoIosPaper />,
             },
-            {
-                title: 'Book',
-                path: '/reports/radio',
-                icon: <IoIcons.IoIosPaper />,
-            },
+          
             {
                 title: 'My Bookings',
                 path: '/overview/bookings',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Messages',
-                path: '/overview/messages',
                 icon: <IoIcons.IoIosPaper />,
             },
             {
@@ -77,38 +63,7 @@ export const SideBarData = [
 
         ]
     },
-    {
-        title: 'Tickets',
-        path: '/reports/oke',
-        icon: <i className="fas fa-ticket-alt"></i>,
-        iconClosed: <RiIcons.RiArrowDownSFill />,
-        iconOpened: <RiIcons.RiArrowUpSFill />,
-        subNav: [
-
-            {
-                title: 'Referral & Claims',
-                path: '/overview/plans',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Ratings',
-                path: '/reports/radio',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Testimonials',
-                path: '/overview/bookings',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Tickets',
-                path: '/overview/messages',
-                icon: <IoIcons.IoIosPaper />,
-            }
-
-
-        ]
-    },
+   
     {
         title: 'AutoShop',
         path: '/reports/oke',
@@ -117,31 +72,13 @@ export const SideBarData = [
         iconOpened: <RiIcons.RiArrowUpSFill />,
         subNav: [
 
-            {
-                title: 'All Products List',
-                path: '/overview/plans',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'Carts',
-                path: '/overview/vehicles',
-                icon: <IoIcons.IoIosPaper />,
-            },
-            {
-                title: 'WishList',
-                path: '/overview/bookings',
-                icon: <IoIcons.IoIosPaper />,
-            },
+        
             {
                 title: 'AutoShop',
                 path: '/overview/autoshop',
                 icon: <IoIcons.IoIosPaper />,
             },
-            {
-                title: 'Checkout',
-                path: '/overview/messages',
-                icon: <IoIcons.IoIosPaper />,
-            }
+           
 
 
         ]
