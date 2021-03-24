@@ -27,7 +27,7 @@ class SubscriptionComponent extends Component {
         const totalRecords = allRecords.length;
         if (totalRecords === 0) return null;
         return (
-            <div style={{ backgroundColor: '#FFF2E5', height: '600px', overflowX: 'scroll' }} className='subscription'>
+            <div style={{ backgroundColor: '#FFF2E5', height: '100vh', overflowX: 'scroll' }} className='subscription'>
               <div style={{margin:'30px auto',width:'95%',backgroundColor:'white'}}>
               <div>
                     <p className='subscription-packages'>Subscription Packages</p>

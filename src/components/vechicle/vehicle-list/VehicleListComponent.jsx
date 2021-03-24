@@ -27,14 +27,14 @@ class VehicleListComponent extends Component {
         if (totalRecords === 0) return null;
 
         return (
-            <div style={{ backgroundColor: '#fff2e5', height: '600px', overflowX: 'scroll' }}>
+            <div style={{ backgroundColor: '#fff2e5', height: '100vh', overflowX: 'scroll' }}>
                 <p className='my-bookings'>My Bookings</p>
                 <div  className="w-100  d-flex flex-row flex-wrap align-items-center justify-content-between">
                         <div style={{margin:'0 auto'}} className="d-flex flex-row py-4 align-items-center">
                             <Pagination totalRecords={totalRecords} pageLimit={9} pageNeighbours={1} onPageChanged={this.onPageChanged} />
                         </div>
                     </div>
-                <div style={{ backgroundColor: 'white', width: '90%', margin: '0 auto' }}>
+                <div style={{ backgroundColor: 'white', width: '90%', margin: '0 auto' ,marginBottom:'50px' }}>
                 <table>
                             <thead>
                                 <tr>

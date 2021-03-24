@@ -14,7 +14,7 @@
 
 .content {
   overflow-x: scroll;
-  height: 630px;
+  height: 100vh;
 }
 
 .mainblock {

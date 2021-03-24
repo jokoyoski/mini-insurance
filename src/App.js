@@ -14,6 +14,7 @@ import MessageComponent from './components/messages/MessageComponent';
 import AutoShopComponent from './components/autoshop/AutoShopComponent';
 import { UserSideBarComponent } from './components/user/user-side-bar/UserSideBarComponent';
 import UserComponent from './components/user/user-router/UserComponent';
+import BooksComponent from './components/book/BooksComponent';
 class App extends React.Component {
 
     state = { selectedItem: 'Tickets' };
@@ -47,6 +48,7 @@ class App extends React.Component {
                                 <Route path="/overview/vehicles" exact component={VehicleListComponent} />
                                 <Route path="/overview/messages" exact component={MessageComponent} />
                                 <Route path="/overview/autoshop" exact component={AutoShopComponent} />
+                                <Route path="/overview/book" exact component={BooksComponent} />
                             </div>
                         </Switch>
                     </Column>

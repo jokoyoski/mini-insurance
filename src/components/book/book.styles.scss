@@ -1,0 +1,23 @@
+select {
+    color: orange;
+}
+
+.main-book {
+    background-color: #fff2e5;
+    height: 800px;
+    .book-top {
+        color: #f7941d;
+        padding: 30px 0px 0px 31px;
+        margin-bottom: 0px;
+    }
+    .main-section {
+        background-color: white;
+        height: 600px;
+        width: 90%;
+        margin: 20px auto;
+        .books-service {
+            color: #f7941d;
+            padding: 30px 0px 0px 30px;
+        }
+    }
+}

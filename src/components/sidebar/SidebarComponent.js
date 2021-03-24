@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
         width: 255,
         paddingTop: 32,
         minHeight:'600px',
-        maxHeight: '700px',
     },
     containerMobile: {
         transition: 'left 0.5s, right 0.5s',

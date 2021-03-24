@@ -16,7 +16,7 @@ export const SideBarData = [
         subNav: [
 
             {
-                title: 'My Profile',
+                title: 'Home',
                 path: '/',
                 icon: <i className="far fa-user-circle"></i>
             },
@@ -26,9 +26,14 @@ export const SideBarData = [
                 icon: <AiIcons.AiFillHome />,
             },
             {
-                title: 'Add Profile',
+                title: 'My Profile',
                 path: '/user/addprofile',
                 icon: <AiIcons.AiFillHome />,
+            },
+            {
+                title: 'Reset Password',
+                path: '/user/resetpassword',
+                icon: <IoIcons.IoIosPaper />,
             }
 
 
@@ -55,10 +60,11 @@ export const SideBarData = [
                 icon: <IoIcons.IoIosPaper />,
             },
             {
-                title: 'Reset Password',
-                path: '/user/resetpassword',
+                title: 'Book',
+                path: '/overview/book',
                 icon: <IoIcons.IoIosPaper />,
             }
+           
 
 
         ]
@@ -76,6 +82,12 @@ export const SideBarData = [
             {
                 title: 'AutoShop',
                 path: '/overview/autoshop',
+                icon: <IoIcons.IoIosPaper />,
+            },
+           
+            {
+                title: 'Manage Vehicle',
+                path: '/user/managevehicle',
                 icon: <IoIcons.IoIosPaper />,
             },
            

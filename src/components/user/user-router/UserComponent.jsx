@@ -7,6 +7,7 @@ import HeaderComponent from '../../header/HeaderComponent';
 import AddProfileComponent from '../AddProfie/AddProfilecomponent';
 import './user.styles.scss';
 import ResetPasswordComponent from '../ResetPassword/ResetPasswordComponent';
+import ManageVehicleComponent from '../../manage-vehicles/ManageVehicleComponent';
 
 export class UserComponent extends Component {
 
@@ -36,6 +37,7 @@ export class UserComponent extends Component {
                                 <div className='content'>
                                     <Route path="/user/addprofile" exact component={AddProfileComponent} />
                                     <Route path="/user/resetpassword" exact component={ResetPasswordComponent} />
+                                    <Route path="/user/managevehicle" exact component={ManageVehicleComponent} />
                                 </div>
                             </Switch>
                         </div>

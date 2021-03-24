@@ -25,7 +25,7 @@ export class BookingComponent extends Component {
         const totalRecords = allRecords.length;
         if (totalRecords === 0) return null;
         return (
-            <div style={{ backgroundColor: '#fff2e5', height: '600px' }}>
+            <div style={{ backgroundColor: '#fff2e5', height: '100vh' }}>
                 <p className='my-bookings'>My Bookings</p>
                 <div className="w-100  d-flex flex-row flex-wrap align-items-center justify-content-between">
                     <div style={{ margin: '0 auto' }} className="d-flex flex-row py-4 align-items-center">
@@ -51,7 +51,7 @@ export class BookingComponent extends Component {
                                         <td style={{fontSize:'0.7rem'}} data-label="Name">{record.service}</td>
                                         <td style={{fontSize:'0.7rem'}} data-label="Location">{record.location}</td>
                                         <td style={{fontSize:'0.7rem'}} data-label="Date">{record.date}</td>
-                                        <td style={{fontSize:'0.7rem'}} data-label="Status"> <a href="#" class="table-button">Update</a></td>
+                                        <td style={{fontSize:'0.7rem',textDecoration:'none',cursor:'none',color:'white',height:'30px',marginTop:'30p'}} data-label="Status"><label style={{backgroundColor:'#1ABC9C',height:'40px',width:'70%',paddingTop:'9px'}}>Active</label></td>
                                     </tr>
                                 )
                             })}

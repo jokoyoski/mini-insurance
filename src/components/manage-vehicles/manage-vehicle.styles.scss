@@ -1,0 +1,33 @@
+
+.manage-vehicle{
+  background-color: white;
+  height: 800px;
+  margin: 0px 20px 20px 30px;
+    .manage-my-vehicle{
+        color: orange;
+        margin: 10px 30px ;
+    }
+
+    .add-vehicle-section{
+        display: flex;
+        flex-direction: row;
+        color: orange;
+        justify-content: space-between;
+        margin: 10px 10px 3px 10px;
+        .manage{
+            background-color: #FFF6EC;
+            height: 45px;
+            margin:20px 0px 20px 20px;
+            width: 130px;
+            
+        }
+    }
+
+    .form-section{
+
+        .form-value{
+            display: flex;
+            flex-direction: row;
+        }
+    }
+}
