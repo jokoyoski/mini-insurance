@@ -7,7 +7,7 @@ export const InputCompnent = (props) => {
             <input type={props.type ||'text'} name={props.name} id={props.id} autoComplete="off"
              value={props.value}
              onChange={props.onChange}
-             style={{backgroundColor:'#fff2e5', border:'1px solid orange'}}
+             style={{backgroundColor:'#fff2e5', border:'1px solid orange',fontSize:'0.7rem'}}
              placeholder={props.placeholder}
              className={props.error ? 'error' :''}
              />

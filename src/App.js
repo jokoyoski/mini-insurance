@@ -33,7 +33,7 @@ class App extends React.Component {
         const { selectedItem } = this.state;
         return (
 
-            <Router>
+            <Router forceRefresh={true}>
                 <Row className='side-container'>
                     <SidebarComponent selectedItem={selectedItem} onChange={(selectedItem) => this.setState({ selectedItem })} />
                     <Column flexGrow={1}>

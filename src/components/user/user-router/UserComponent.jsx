@@ -8,6 +8,9 @@ import AddProfileComponent from '../AddProfie/AddProfilecomponent';
 import './user.styles.scss';
 import ResetPasswordComponent from '../ResetPassword/ResetPasswordComponent';
 import ManageVehicleComponent from '../../manage-vehicles/ManageVehicleComponent';
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory()
 
 export class UserComponent extends Component {
 
