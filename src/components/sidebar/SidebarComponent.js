@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
         transition: 'left 0.5s, right 0.5s',
         position: 'absolute',
         width: 255,
-        minHeight:'600px',
-        maxHeight: '630px',
+        minHeight:'775px',
+        maxHeight: '775px',
         zIndex: 901
     },
     mainContainer: {
