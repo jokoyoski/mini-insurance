@@ -13,6 +13,7 @@ export const SideBarData = [
         icon: <i className="far fa-user-circle"></i>,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
+        id:3,
         subNav: [
 
             {
@@ -46,6 +47,7 @@ export const SideBarData = [
         icon: <i className="fas fa-home"></i>,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
+        id:30,
         subNav: [
 
             {
@@ -76,6 +78,7 @@ export const SideBarData = [
         icon: <i className="fas fa-store"></i>,
         iconClosed: <RiIcons.RiArrowDownSFill />,
         iconOpened: <RiIcons.RiArrowUpSFill />,
+        id:23,
         subNav: [
 
         
