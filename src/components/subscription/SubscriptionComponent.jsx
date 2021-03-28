@@ -3,6 +3,10 @@ import '../subscription/subscription.styles.scss';
 import '../pagination/pagination.styles.scss';
 import VehicleData from '../../assets/mocks/Subscription_DATA.json';
 import Pagination from '../../components/pagination/pagination';
+import SidebarComponent from '../sidebar/SidebarComponent';
+import { Column, Row } from 'simple-flexbox';
+import HeaderComponent from '../header/HeaderComponent';
+
 
 
 class SubscriptionComponent extends Component {
@@ -27,87 +31,97 @@ class SubscriptionComponent extends Component {
         const totalRecords = allRecords.length;
         if (totalRecords === 0) return null;
         return (
-            <div style={{ backgroundColor: '#FFF2E5', height: '100vh', overflowX: 'scroll' }} className='subscription'>
-              <div style={{margin:'30px auto',width:'95%',backgroundColor:'white'}}>
-              <div>
-                    <p className='subscription-packages'>Subscription Packages</p>
-                    <div className='package'>
-                        <div className='plans'>
-                            <p style={{ paddingTop: '5px' }} className='fasta'>FASTA</p>
-                            <div style={{ display: 'flex', textAlign: 'center', margin: '0 auto' }}>
-                                <p className='amount'>₦500</p>perMonth
-                         </div>
-                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '240px' }}>
+            <>
+                <Row className='side-container'>
+                    <SidebarComponent />
+                    <Column flexGrow={1}>
+                        <HeaderComponent />
+                        <div style={{ backgroundColor: '#FFF2E5', height: '100vh', overflowX: 'scroll' }} className='subscription'>
+                            <div style={{ margin: '30px auto', width: '95%', backgroundColor: 'white' }}>
                                 <div>
-                                    <p>Emergency Roadside Assistnce</p>
-                                    <p>Car fueling</p>
-                                    <p>Locksmit</p>
-                                    <p>TyreChange</p>
-                                    <p>Battery JumpStart</p>
-                                </div>
-                                <a href="#" style={{ marginBottom: '30px' ,fontWeight:'800' }} class="button">Subscribe Now</a>
-                            </div>
-
-                        </div>
-
-                        <div className='plans'>
-                            <p style={{ paddingTop: '5px' }} className='fasta'>FASTA PLUS</p>
-                            <div style={{ display: 'flex', textAlign: 'center', margin: '0 auto' }}>
-                                <p className='amount'>₦1000</p>perMonth
+                                    <p className='subscription-packages'>Subscription Packages</p>
+                                    <div className='package'>
+                                        <div className='plans'>
+                                            <p style={{ paddingTop: '5px' }} className='fasta'>FASTA</p>
+                                            <div style={{ display: 'flex', textAlign: 'center', margin: '0 auto' }}>
+                                                <p className='amount'>₦500</p>perMonth
                          </div>
-                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '240px' }}>
-                                <div>
-                                    <p>From Accident Scene to Auto Repair Shop</p>
+                                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '240px' }}>
+                                                <div>
+                                                    <p>Emergency Roadside Assistnce</p>
+                                                    <p>Car fueling</p>
+                                                    <p>Locksmit</p>
+                                                    <p>TyreChange</p>
+                                                    <p>Battery JumpStart</p>
+                                                </div>
+                                                <a href="#" style={{ marginBottom: '30px', fontWeight: '800' }} class="button">Subscribe Now</a>
+                                            </div>
+
+                                        </div>
+
+                                        <div className='plans'>
+                                            <p style={{ paddingTop: '5px' }} className='fasta'>FASTA PLUS</p>
+                                            <div style={{ display: 'flex', textAlign: 'center', margin: '0 auto' }}>
+                                                <p className='amount'>₦1000</p>perMonth
+                         </div>
+                                            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', height: '240px' }}>
+                                                <div>
+                                                    <p>From Accident Scene to Auto Repair Shop</p>
+                                                </div>
+                                                <a href="#" style={{ marginBottom: '30px', fontWeight: '800' }} class="button">Subscribe Now</a>
+
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
                                 </div>
-                                <a href="#" style={{ marginBottom: '30px' ,fontWeight:'800' }} class="button">Subscribe Now</a>
-                           
-                              </div>
+                                <div className='subscription-history'>
+                                    <p className='subscription-history-label'>Subscription History</p>
+                                    <div className="row d-flex flex-row">
+                                        <div className="w-100  d-flex flex-row flex-wrap align-items-center justify-content-between">
+                                            <div style={{ margin: '0 auto' }} className="d-flex flex-row  align-items-center">
+                                                <Pagination totalRecords={totalRecords} pageLimit={9} pageNeighbours={1} onPageChanged={this.onPageChanged} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div style={{ overflowX: 'auto' }}>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>SubscriptionID</th>
+                                                    <th>Name</th>
+                                                    <th>Date</th>
+                                                    <th>Expiry Date</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {currentRecords.map(record => {
+                                                    return (
+                                                        <tr>
+                                                            <td style={{ fontSize: '0.7rem' }} scope="row" data-label="Subscription ID">{record.subscription_id}</td>
+                                                            <td style={{ fontSize: '0.7rem' }} data-label="Name">{record.name}</td>
+                                                            <td style={{ fontSize: '0.7rem' }} data-label="Date">{record.date}</td>
+                                                            <td style={{ fontSize: '0.7rem' }} data-label="Due Date">{record.expiry_date}</td>
+                                                            <td style={{ fontSize: '0.7rem' }} data-label="Update"> <a href="#" class="table-button">Update</a></td>
+                                                        </tr>
+                                                    )
+                                                })}
 
-                        </div>
+                                            </tbody>
+                                        </table>
 
-
-                    </div>
-                </div>
-                <div className='subscription-history'>
-                    <p className='subscription-history-label'>Subscription History</p>
-                    <div className="row d-flex flex-row">
-                        <div className="w-100  d-flex flex-row flex-wrap align-items-center justify-content-between">
-                            <div style={{ margin: '0 auto' }} className="d-flex flex-row  align-items-center">
-                                <Pagination totalRecords={totalRecords} pageLimit={9} pageNeighbours={1} onPageChanged={this.onPageChanged} />
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div style={{ overflowX: 'auto' }}>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>SubscriptionID</th>
-                                    <th>Name</th>
-                                    <th>Date</th>
-                                    <th>Expiry Date</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {currentRecords.map(record => {
-                                    return (
-                                        <tr>
-                                            <td style={{fontSize:'0.7rem'}} scope="row" data-label="Subscription ID">{record.subscription_id}</td>
-                                            <td style={{fontSize:'0.7rem'}} data-label="Name">{record.name}</td>
-                                            <td style={{fontSize:'0.7rem'}} data-label="Date">{record.date}</td>
-                                            <td style={{fontSize:'0.7rem'}} data-label="Due Date">{record.expiry_date}</td>
-                                            <td style={{fontSize:'0.7rem'}} data-label="Update"> <a href="#" class="table-button">Update</a></td>
-                                        </tr>
-                                    )
-                                })}
+                    </Column>
+                </Row>
+            </>
 
-                            </tbody>
-                        </table>
 
-                    </div>
-                </div>
-              </div>
-            </div>
         )
     }
 

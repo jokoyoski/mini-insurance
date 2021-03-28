@@ -3,7 +3,13 @@ import useForm from '../../../formData/useForm';
 import validate from '../../../formData/validate';
 import Input from '../../Input/InputCompnent';
 import './addprofile.styles.scss';
-import  CarPic from '../../../assets/images/car-pic.jpeg';
+import SidebarComponent from '../../sidebar/SidebarComponent';
+import { Column, Row } from 'simple-flexbox';
+import HeaderComponent from '../../header/HeaderComponent';
+import UserSideBarComponent from '../user-side-bar/UserSideBarComponent';
+
+
+import CarPic from '../../../assets/images/car-pic.jpeg';
 const initialState = {
     name: {
         value: '',
@@ -37,7 +43,7 @@ const initialState = {
         value: '',
         required: true
     },
-   
+
 
 }
 export const AddProfileComponent = () => {
@@ -59,103 +65,121 @@ export const AddProfileComponent = () => {
         console.log(formData.name.value)
     }
     return (
-        <div className="add-profile-container">
-                <div style={{ backgroundColor: 'white' }} className='form-section'>
-                    <form  className="form" onSubmit={submitHandler}>
-                        <p className='subscription-history-label'>My Profile</p>
-                        <div className='row-form'>
-                            <Input
-                                label="First Name"
-                                name="name"
-                                placeholder="Enter your first Name"
-                                id="name"
-                                value={formData.name.value}
-                                onChange={changeHandler}
-                                error={errors.name}
-                            />
-                            <Input
-                                label="Last Name"
-                                name="lastname"
-                                placeholder="Enter your Last Name"
-                                id="name"
-                                value={formData.lastname.value}
-                                onChange={changeHandler}
-                                error={errors.lastname}
-                            />
-                        </div>
-                        <div className='row-form'>
-                            <Input
-                                label="Email"
-                                placeholder="Enter your Email"
-                                name="email"
-                                id="name"
-                                value={formData.email.value}
-                                onChange={changeHandler}
-                                error={errors.email}
-                            />
-                            <Input
-                                label="Phone Number"
-                                name="phonenumber"
-                                placeholder="Enter your Phone Number"
-                                id="name"
-                                value={formData.phonenumber.value}
-                                onChange={changeHandler}
-                                error={errors.phonenumber}
-                            />
-                        </div>
+        <>
+            <Row className='side-container'>
+                <SidebarComponent />
+                <Column flexGrow={1}>
+                    <HeaderComponent />
+                    <div className='main-section'>
+                        <p className='profile-page'>Profile Page</p>
+                        <div className='arrange'>
+                            <div className='profile-area'>
+                                <UserSideBarComponent />
+                            </div>
+                            <div className="add-profile-container">
+                        <div style={{ backgroundColor: 'white' }} className='form-section'>
+                            <form className="form" onSubmit={submitHandler}>
+                                <p className='subscription-history-label'>My Profile</p>
+                                <div className='row-form'>
+                                    <Input
+                                        label="First Name"
+                                        name="name"
+                                        placeholder="Enter your first Name"
+                                        id="name"
+                                        value={formData.name.value}
+                                        onChange={changeHandler}
+                                        error={errors.name}
+                                    />
+                                    <Input
+                                        label="Last Name"
+                                        name="lastname"
+                                        placeholder="Enter your Last Name"
+                                        id="name"
+                                        value={formData.lastname.value}
+                                        onChange={changeHandler}
+                                        error={errors.lastname}
+                                    />
+                                </div>
+                                <div className='row-form'>
+                                    <Input
+                                        label="Email"
+                                        placeholder="Enter your Email"
+                                        name="email"
+                                        id="name"
+                                        value={formData.email.value}
+                                        onChange={changeHandler}
+                                        error={errors.email}
+                                    />
+                                    <Input
+                                        label="Phone Number"
+                                        name="phonenumber"
+                                        placeholder="Enter your Phone Number"
+                                        id="name"
+                                        value={formData.phonenumber.value}
+                                        onChange={changeHandler}
+                                        error={errors.phonenumber}
+                                    />
+                                </div>
 
-                        <div className='row-form'>
-                            <Input
-                                label="Address"
-                                name="address"
-                                placeholder="Enter your Address"
-                                id="name"
-                                value={formData.address.value}
-                                onChange={changeHandler}
-                                error={errors.address}
-                            />
-                            <Input
-                                label="State"
-                                name="state"
-                                id="state"
-                                placeholder="Enter your first State"
-                                value={formData.state.value}
-                                onChange={changeHandler}
-                                error={errors.state}
-                            />
+                                <div className='row-form'>
+                                    <Input
+                                        label="Address"
+                                        name="address"
+                                        placeholder="Enter your Address"
+                                        id="name"
+                                        value={formData.address.value}
+                                        onChange={changeHandler}
+                                        error={errors.address}
+                                    />
+                                    <Input
+                                        label="State"
+                                        name="state"
+                                        id="state"
+                                        placeholder="Enter your first State"
+                                        value={formData.state.value}
+                                        onChange={changeHandler}
+                                        error={errors.state}
+                                    />
+                                </div>
+                                <div className='row-form'>
+                                    <Input
+                                        label="Status"
+                                        name="status"
+                                        id="status"
+                                        placeholder="Enter your first Status"
+                                        value={formData.status.value}
+                                        onChange={changeHandler}
+                                        error={errors.statuss}
+                                    />
+                                    <Input
+                                        label="Date Created"
+                                        name="datecreated"
+                                        id="datecreated"
+                                        value={formData.datecreated.value}
+                                        onChange={changeHandler}
+                                        error={errors.datecreate}
+                                    />
+                                </div>
+                                <div className='row-form-last'>
+                                    <Input
+                                        label="Subscription Plan"
+                                        name="subscriptionplan"
+                                        id="subscriptionplan"
+                                        value={formData.status.value}
+                                        onChange={changeHandler}
+                                        error={errors.statuss}
+                                    />
+                                </div>
+                            </form>
                         </div>
-                        <div className='row-form'>
-                            <Input
-                                label="Status"
-                                name="status"
-                                id="status"
-                                placeholder="Enter your first Status"
-                                value={formData.status.value}
-                                onChange={changeHandler}
-                                error={errors.statuss}
-                            />
-                            <Input
-                                label="Date Created"
-                                name="datecreated"
-                                id="datecreated"
-                                value={formData.datecreated.value}
-                                onChange={changeHandler}
-                                error={errors.datecreate}
-                            />
+                    </div>
                         </div>
-                        <div className='row-form-last'>
-                            <Input
-                                label="Subscription Plan"
-                                name="subscriptionplan"
-                                id="subscriptionplan"
-                                value={formData.status.value}
-                                onChange={changeHandler}
-                                error={errors.statuss}
-                            />
-                        </div>
-                    </form>
-                </div>
-            </div>
+                    </div>
+
+
+                </Column>
+            </Row>
+        </>
     )
 }
 

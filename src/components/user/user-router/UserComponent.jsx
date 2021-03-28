@@ -30,22 +30,14 @@ export class UserComponent extends Component {
         return (
             <div>
                 <Router>
-                    <div className='main-section'>
-                    <p className='profile-page'>Profile Page</p>
-                        <div className='arrange'>
-                            <div className='profile-area'>
-                                <UserSideBarComponent />
-                            </div>
-                            <Switch>
-                                <div className='content'>
-                                    <Route path="/user/addprofile" exact component={AddProfileComponent} />
-                                    <Route path="/user/resetpassword" exact component={ResetPasswordComponent} />
-                                    <Route path="/user/managevehicle" exact component={ManageVehicleComponent} />
-                                </div>
-                            </Switch>
+                    <Switch>
+                        <div className='content'>
+                            <Route path="/user/addprofile" exact component={AddProfileComponent} />
+                            <Route path="/user/resetpassword" exact component={ResetPasswordComponent} />
+                            <Route path="/user/managevehicle" exact component={ManageVehicleComponent} />
                         </div>
+                    </Switch>
 
-                    </div>
                 </Router>
             </div>
         )

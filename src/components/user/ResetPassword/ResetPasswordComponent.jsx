@@ -3,6 +3,12 @@ import useForm from '../../../formData/useForm';
 import validate from '../../../formData/validate';
 import Input from '../../Input/InputCompnent';
 import './reset-password.scss';
+import SidebarComponent from '../../sidebar/SidebarComponent';
+import { Column, Row } from 'simple-flexbox';
+import HeaderComponent from '../../header/HeaderComponent';
+import UserSideBarComponent from '../user-side-bar/UserSideBarComponent';
+
+
 import CarPic from '../../../assets/images/car-pic.jpeg';
 const initialState = {
     oldpassword: {
@@ -39,38 +45,55 @@ export const ResetPasswordComponent = () => {
         console.log(formData.confirmpassword.value)
     }
     return (
-        <div className="add-profile-container">
-            <div style={{ backgroundColor: 'white' }} className='form-section'>
-            <p className='reset-profile-page'>Reset Password</p>
-                <form className="form" onSubmit={submitHandler}>
-                    <Input
-                        label="Old Password"
-                        name="oldpassword"
-                        id="oldpassword"
-                        value={formData.oldpassword.value}
-                        onChange={changeHandler}
-                        error={errors.oldpassword}
-                    />
-                    <Input
-                        label="New Password"
-                        name="newpassword"
-                        id="newpassword"
-                        value={formData.newpassword.value}
-                        onChange={changeHandler}
-                        error={errors.newpassword}
-                    />
-                    <Input
-                        label="Confirm Password"
-                        name="confirmpassword"
-                        id="confirmpassword"
-                        value={formData.confirmpassword.value}
-                        onChange={changeHandler}
-                        error={errors.confirmpassword}
-                    />
-                    <button style={{ marginLeft: '20px' }} className='submit-button'>Update</button>
-                </form>
-            </div>
-        </div>
+        <>
+            <Row className='side-container'>
+                <SidebarComponent />
+                <Column flexGrow={1}>
+                    <HeaderComponent />
+
+                    <div className='main-section'>
+                        <p className='profile-page'>Profile Page</p>
+                        <div className='arrange'>
+                            <div className='profile-area'>
+                                <UserSideBarComponent />
+                            </div>
+                            <div className="add-profile-container">
+                        <div style={{ backgroundColor: 'white' }} className='form-section'>
+                            <p className='reset-profile-page'>Reset Password</p>
+                            <form className="form" onSubmit={submitHandler}>
+                                <Input
+                                    label="Old Password"
+                                    name="oldpassword"
+                                    id="oldpassword"
+                                    value={formData.oldpassword.value}
+                                    onChange={changeHandler}
+                                    error={errors.oldpassword}
+                                />
+                                <Input
+                                    label="New Password"
+                                    name="newpassword"
+                                    id="newpassword"
+                                    value={formData.newpassword.value}
+                                    onChange={changeHandler}
+                                    error={errors.newpassword}
+                                />
+                                <Input
+                                    label="Confirm Password"
+                                    name="confirmpassword"
+                                    id="confirmpassword"
+                                    value={formData.confirmpassword.value}
+                                    onChange={changeHandler}
+                                    error={errors.confirmpassword}
+                                />
+                                <button style={{ marginLeft: '20px' }} className='submit-button'>Update</button>
+                            </form>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </Column>
+            </Row>
+        </>
     )
 }
 

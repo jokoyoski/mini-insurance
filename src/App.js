@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Column, Row } from 'simple-flexbox';
 import SidebarComponent from './components/sidebar/SidebarComponent';
 import HeaderComponent from './components/header/HeaderComponent';
 import ContentComponent from './components/dashboard/overview/ContentComponent';
@@ -34,10 +33,6 @@ class App extends React.Component {
         return (
 
             <Router forceRefresh={true}>
-                <Row className='side-container'>
-                    <SidebarComponent selectedItem={selectedItem} onChange={(selectedItem) => this.setState({ selectedItem })} />
-                    <Column flexGrow={1}>
-                        <HeaderComponent title={selectedItem} />
                         <Switch>
                             <div className='content'>
                                 <Route exact path='/' component={ContentComponent} />
@@ -51,8 +46,6 @@ class App extends React.Component {
                                 <Route path="/overview/book" exact component={BooksComponent} />
                             </div>
                         </Switch>
-                    </Column>
-                </Row>
             </Router>
         );
     }

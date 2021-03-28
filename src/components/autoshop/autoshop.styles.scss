@@ -45,7 +45,7 @@
         flex: 1 1 85%;
         flex-direction: row;
         height: 600px;
-        background-color:#E5E5E5;
+        background-color:white;
         .item-card-section {
             display: flex;
             flex-wrap: wrap;
@@ -55,12 +55,12 @@
                 flex-direction: column;
                 height: 200px;
                 width: 43%;
-                border-radius: 30px 20px 0px 0px;
+                border-radius: 4px 10px 0px 0px;
                 background-color: white;
                 font-size: 0.6rem;
                 .picture-section {
                     flex: 1 1 30%;
-                    border-radius: 14px 14px 0px 0px;
+                    border-radius: 8px 8px 0px 0px;
                 }
                 .item-details {
                     flex: 0 0 20%;

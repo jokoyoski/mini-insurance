@@ -10,7 +10,7 @@
     margin: 4px 2px;
     width: $width;
     margin: 0 auto;
-    height:'50px';
+    height:40px;
     cursor: pointer;
 }
 
@@ -83,6 +83,7 @@
                 display: flex;
                 width: 100%;
                 background-color: #fff2e5;
+                text-decoration: none;
                 flex-direction: column;
                 text-align: center;
                 height: 350px;
@@ -221,5 +222,5 @@ table th {
 }
 
 .table-button {
-    @include button(100%, #1abc9c);
+    @include button(50%, #1abc9c);
 }
