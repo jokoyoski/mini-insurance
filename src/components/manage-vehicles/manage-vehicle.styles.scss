@@ -2,8 +2,11 @@
 .manage-vehicle{
   background-color: white;
   height: 800px;
+  flex:1;
+  
   margin: 0px 10px 20px 10px;
     .manage-my-vehicle{
+        font-size: 0.8rem;
         color: orange;
         margin: 10px 30px ;
     }

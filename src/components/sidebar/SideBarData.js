@@ -22,11 +22,6 @@ export const SideBarData = [
                 icon: <i className="far fa-user-circle"></i>
             },
             {
-                title: 'Vehicles',
-                path: '/overview/vehicles',
-                icon: <AiIcons.AiFillHome />,
-            },
-            {
                 title: 'My Profile',
                 path: '/user/addprofile',
                 icon: <AiIcons.AiFillHome />,
@@ -65,7 +60,13 @@ export const SideBarData = [
                 title: 'Book',
                 path: '/overview/book',
                 icon: <IoIcons.IoIosPaper />,
+            },
+            {
+                title: 'Messages',
+                path: '/overview/messages',
+                icon: <IoIcons.IoIosPaper />,
             }
+           
            
 
 
@@ -83,18 +84,11 @@ export const SideBarData = [
 
         
             {
-                title: 'AutoShop',
+                title: 'All Product List',
                 path: '/overview/autoshop',
                 icon: <IoIcons.IoIosPaper />,
             },
            
-            {
-                title: 'Manage Vehicle',
-                path: '/user/managevehicle',
-                icon: <IoIcons.IoIosPaper />,
-            },
-           
-
 
         ]
     }

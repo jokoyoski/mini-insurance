@@ -79,12 +79,12 @@ export const AddProfileComponent = () => {
                             <div className="add-profile-container">
                         <div style={{ backgroundColor: 'white' }} className='form-section'>
                             <form className="form" onSubmit={submitHandler}>
-                                <p className='subscription-history-label'>My Profile</p>
+                                <p style={{padding:'20px 10px 0px 10px'}} className='subscription-history-label profile-page-area'>My Profile</p>
                                 <div className='row-form'>
                                     <Input
                                         label="First Name"
                                         name="name"
-                                        placeholder="Enter your first Name"
+                                       
                                         id="name"
                                         value={formData.name.value}
                                         onChange={changeHandler}
@@ -93,7 +93,7 @@ export const AddProfileComponent = () => {
                                     <Input
                                         label="Last Name"
                                         name="lastname"
-                                        placeholder="Enter your Last Name"
+                                      
                                         id="name"
                                         value={formData.lastname.value}
                                         onChange={changeHandler}
@@ -103,7 +103,7 @@ export const AddProfileComponent = () => {
                                 <div className='row-form'>
                                     <Input
                                         label="Email"
-                                        placeholder="Enter your Email"
+                                        
                                         name="email"
                                         id="name"
                                         value={formData.email.value}
@@ -113,7 +113,7 @@ export const AddProfileComponent = () => {
                                     <Input
                                         label="Phone Number"
                                         name="phonenumber"
-                                        placeholder="Enter your Phone Number"
+                                       
                                         id="name"
                                         value={formData.phonenumber.value}
                                         onChange={changeHandler}
@@ -125,7 +125,7 @@ export const AddProfileComponent = () => {
                                     <Input
                                         label="Address"
                                         name="address"
-                                        placeholder="Enter your Address"
+                                       
                                         id="name"
                                         value={formData.address.value}
                                         onChange={changeHandler}
@@ -135,7 +135,7 @@ export const AddProfileComponent = () => {
                                         label="State"
                                         name="state"
                                         id="state"
-                                        placeholder="Enter your first State"
+            
                                         value={formData.state.value}
                                         onChange={changeHandler}
                                         error={errors.state}
@@ -146,7 +146,7 @@ export const AddProfileComponent = () => {
                                         label="Status"
                                         name="status"
                                         id="status"
-                                        placeholder="Enter your first Status"
+                                       
                                         value={formData.status.value}
                                         onChange={changeHandler}
                                         error={errors.statuss}

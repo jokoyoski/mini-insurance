@@ -59,7 +59,7 @@ export const ResetPasswordComponent = () => {
                             </div>
                             <div className="add-profile-container">
                         <div style={{ backgroundColor: 'white' }} className='form-section'>
-                            <p className='reset-profile-page'>Reset Password</p>
+                            <p style={{padding:'20px 10px 0px 20px'}} className='reset-profile-page'>Reset Password</p>
                             <form className="form" onSubmit={submitHandler}>
                                 <Input
                                     label="Old Password"

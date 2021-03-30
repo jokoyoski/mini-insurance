@@ -28,8 +28,8 @@ export const UserSideBarComponent = () => {
               <div className='profile-section'>
                     <div className='pic-section'>
                       <img style={{width:'120px',height:'120px',border:'2px solid orange',borderRadius:'50%'}}  src={CarPic}/>
-                        <p  style={{marginBottom:'0'}}>Adeola Oladeinde</p>
-                        <p>Account No: 2208497310</p>
+                        <p  style={{marginBottom:'0',fontWeight:'600',fontSize:'0.8rem',marginTop:'10px'}}>Adeola Oladeinde</p>
+                        <p style={{fontSize:'0.8rem' ,marginTop:'10px'}}>Account No: 2208497310</p>
                         <button  className='submit-button'>Upload</button>
                     </div>
                     <div className='navigation-section'>
@@ -37,7 +37,7 @@ export const UserSideBarComponent = () => {
                             <p className={path === '/user/addprofile' ? 'active' : ''}><i class="far fa-user-circle"></i></p>
                             <p className={path === '/user/addprofile' ? 'active' : ''} style={{paddingLeft:'10px'}}>My Profile</p>
                         </div>
-                        <div className={path === '/user/editprofile' ? 'active' : ''} onClick={() => handleDropDownActionClick('/user/editprofile')} style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px',cursor:'pointer' }}>
+                        <div className={path === '/user/addprofile' ? 'active' : ''} onClick={() => handleDropDownActionClick('/user/addprofile')} style={{ display: 'flex', marginTop: '25px', paddingLeft: '15px',cursor:'pointer' }}>
                             <p className><i class="far fa-edit"></i></p>
                             <p style={{paddingLeft:'10px'}}>Edit Profile</p>
                         </div>

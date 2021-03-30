@@ -76,7 +76,7 @@ export const ManageVehicleComponent = () => {
                                 <div>
                                     <p className='manage-my-vehicle'>Manage My Vehicles</p>
                                     <div className='add-vehicle-section'>
-                                        <p style={{ margin: '20px 0px 20px 20px' }}>Add Vehicle</p>
+                                        <p style={{ margin: '20px 0px 20px 20px' ,fontSize:'0.8rem' }}>Add Vehicle</p>
                                         <div className='manage'>
                                             <p style={{ margin: '0 auto', padding: '15px', fontSize: '0.7rem' }}>Manage my Vehicles</p>
                                         </div>
